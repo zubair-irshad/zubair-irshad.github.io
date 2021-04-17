@@ -225,6 +225,30 @@
       <div style="width:800px; margin:0 auto; text-align=center">
         Deep Learning has revolutionized our ability to solve complex problems such as Vision-and-Language Navigation (VLN). This task requires the agent to navigate to a goal purely based on visual sensory inputs given natural language instructions. However, prior works formulate the problem as a navigation graph with a discrete action space. In this work, we lift the agent off the navigation graph and propose a more complex VLN setting in continuous 3D reconstructed environments. Our proposed setting, Robo-VLN, more closely mimics the challenges of real world navigation. Robo-VLN tasks have longer trajectory lengths, continuous action spaces, and challenges such as obstacles. We provide a suite of baselines inspired by state-of-the-art works in discrete VLN and show that they are less effective at this task. We further propose that decomposing the task into specialized high- and low-level policies can more effectively tackle this task. With extensive experiments, we show that by using layered decision making, modularized training, and decoupling reasoning and imitation, our proposed Hierarchical Cross-Modal (HCM) agent outperforms existing baselines in all key metrics and sets a new benchmark for Robo-VLN.      </div>
       <br><span class=hr></span>
+      
+      <center><h1>Robo-VLN Dataset</h1></center>
+      <div style="width:800px; margin:0 auto; text-align=center">
+        Different from existing VLN environments, we propose a new continuous environment for VLN that more closely mirrors the challenges of the real world, Robo-VLN --- a continuous control formulation for Vision-and-Language Navigation. Compared to navigation graph based and discrete VLN settings, Robo-VLN provides longer horizon trajectories (4.5x average number of steps), more visual frames (3.5M visual frames), and a balanced high-level action distribution. Hence, making the problem more challenging and closer to the real-world.
+        Try our Dataset!
+      </div>
+      <table align=center width=1000px>
+        <p style="margin-top:4px;"></p>
+        <tr><td width=1000px>
+          <center><a href="resources/robo-vln-dataset.gif"><img src = "resources/robo-vln-dataset.gif" height="260px"></img></a><br></center>
+        </td></tr>
+      </table>
+
+      <table align=center width=900px>
+        <tr>
+          <!-- <p style="margin-top:4px;"></p> -->
+          <td width=300px align=center>
+            <span style="font-size:28px"><a href='https://github.com/pathak22/modular-assemblies/'>[GitHub]</a></span>
+          </td>
+        </tr>
+      </table>
+      <br><span class=hr></span>
+
+
 
       <center><h1>Demo Video</h1></center><br/>
       <table align=center width=560px>
