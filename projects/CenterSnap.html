@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Single-Shot Multi-Object 3D Shape Reconstruction and Categorical 6D Pose and Size Estimation.">
+  <meta name="keywords" content="3D Reconstruction, 6D Pose Estimation">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Single-Shot Multi-Object 3D Shape Reconstruction and Categorical 6D Pose and Size Estimation.</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- UPDATE THIS SITE TAGGGGG -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+
+
+
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://zubairirshad.com">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://zubair-irshad.github.io/projects/robo-vln.html">
+            Robo-VLN
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Single-Shot Multi-Object 3D Shape Reconstruction and Categorical 6D Pose and Size Estimation</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://zubairirshad.com">Muhammad Zubair Irshad</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="http://www.tkollar.com/site/">Thomas Kollar</a><sup>2</sup>,</span>
+            <span class="author-block">
+              <a href="https://www.linkedin.com/in/michael-laskey-4b087ba2">Michael Laskey</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.linkedin.com/in/kevin-stone-51171270/">Kevin Stone</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://faculty.cc.gatech.edu/~zk15/">Zsolt Kira</a><sup>1</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Georgia Tech,</span>
+            <span class="author-block"><sup>2</sup>Toyota Research Institute</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/2011.12948"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2011.12948"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/google/nerfies"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href="https://github.com/google/nerfies/releases/tag/0.1"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="teaser" autoplay muted loop height="100%">
+        <source src="static/images/CS_Pose.mp4"
+                type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        <span class="dnerf">CenterSnap:</span> A framework for real-time 6D pose and size estimation and 3D shape reconstruction of novel object instances.
+      </h2>
+    </div>
+  </div>
+</section>
+<!-- <section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-steve">
+          <video poster="" id="steve" autoplay controls muted loop height="100%">
+            <source src="https://homes.cs.washington.edu/~kpar/nerfies/videos/steve.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop height="100%">
+            <source src="https://homes.cs.washington.edu/~kpar/nerfies/videos/chair-tp.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-shiba">
+          <video poster="" id="shiba" autoplay controls muted loop height="100%">
+            <source src="https://homes.cs.washington.edu/~kpar/nerfies/videos/shiba.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-fullbody">
+          <video poster="" id="fullbody" autoplay controls muted loop height="100%">
+            <source src="https://homes.cs.washington.edu/~kpar/nerfies/videos/fullbody.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-blueshirt">
+          <video poster="" id="blueshirt" autoplay controls muted loop height="100%">
+            <source src="https://homes.cs.washington.edu/~kpar/nerfies/videos/blueshirt.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-mask">
+          <video poster="" id="mask" autoplay controls muted loop height="100%">
+            <source src="https://homes.cs.washington.edu/~kpar/nerfies/videos/mask.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-coffee">
+          <video poster="" id="coffee" autoplay controls muted loop height="100%">
+            <source src="https://homes.cs.washington.edu/~kpar/nerfies/videos/coffee.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-toby">
+          <video poster="" id="toby" autoplay controls muted loop height="100%">
+            <source src="https://homes.cs.washington.edu/~kpar/nerfies/videos/toby2.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            We study the complex task of simultaneous multi-object 3D reconstruction, 6D pose and size estimation from a single-view RGBD observation.
+          </p>
+          <p>
+            In contrast to instance-level
+            pose estimation, we focus on a more challenging problem
+            where CAD models are not available in inference time. Existing
+            approaches mainly follow a multi-stage complex pipeline which
+            first localizes and detects each object instance in the image
+            and then regresses to either their 3D meshes or 6D poses.
+            These approaches suffer from high-computational cost and
+            low performance in challenging scenarios, such as occlusions
+            or clutter. Hence, we present a simple one-stage approach
+            to predict both the 3D shape and estimate the 6D pose and
+            size jointly in a bounding-box free manner. In particular,
+            our method regards object instances as centers in a spatial
+            space where each center denotes the complete shape of an
+            object along with its 6D pose and size.
+          </p>
+          <p>
+            Through this per-pixel representation, our approach can reconstruct in real-
+            time (40 FPS) multiple novel object instances and predict their
+            6D pose and sizes in a single-forward pass. Through extensive
+            experiments, we demonstrate that our approach significantly
+            outperforms all shape completion and categorical 6D pose and
+            size estimation baselines on multi-object shapenet and NOCS
+            datasets respectively with a 12.6 % absolute improvement in
+            mAP for 6D pose for novel real-world object instances.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Method</h2>
+        <div class="content has-text-centered">
+          <p>
+            <span class="dnerf">CenterSnap</span> is an anchor-free, single-shot approach to jointly optimize for 3D shape reconstruction and 6D pose and size.
+          </p>
+        </div>
+        <video id="method" autoplay muted loop height="100%">
+          <source src="static/images/Method_CS.mp4"
+                  type="video/mp4">
+        </video>
+      </div>
+    </div>
+    <!--/ Paper video. -->
+
+    <!-- Qualitative Results video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Fast Real-time Reconstruction and Sim2Real transfer</h2>
+        <div class="content has-text-centered">
+          <p>
+            <span class="dnerf">CenterSnap</span> performs effective sim2real transfer using limited real-world examples. Our technique runs at 40 FPS on Nvidia Quadro RTX 5000 GPU
+          </p>
+        </div>
+        <video id="qualtiave" autoplay muted loop height="100%">
+          <source src="static/images/Qualitative_CS_1.mp4"
+                  type="video/mp4">
+        </video>
+      </div>
+    </div>
+    <!--/ Paper video. -->
+
+    <!-- Qualitative Results video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">3D Shape Completion</h2>
+        <div class="content has-text-centered">
+          <p>
+            <span class="dnerf">CenterSnap</span> performs effective sim2real transfer using limited real-world examples. Our technique runs at 40 FPS on Nvidia Quadro RTX 5000 GPU
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Paper video. -->
+    <div class="columns is-centered">
+      <!-- Depth_based reconstruion 1. -->
+      <div class="column">
+        <div class="content">
+          <video id="dollyzoom" autoplay controls muted loop height="100%">
+            <source src="static/images/CS_depth_1.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <!--/ Depth_based reconstruion 1. -->
+
+      <!-- Depth_based reconstruction 2. -->
+      <div class="column">
+            <video id="matting-video" autoplay controls muted loop controls height="100%">
+              <source src="static/images/CS_depth_2.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!--/ Depth_based reconstruction 2. -->
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered">
+      <!-- Visual Effects. -->
+      <div class="column">
+        <div class="content">
+          <h2 class="title is-3">6D Pose and Size Comparison</h2>
+          <p>
+            <i>CenterSnap</i> performs accurate 6D pose and size estimation on NOCS-Real275 Dataset.
+          </p>
+          <video id="nocs_comparison" autoplay muted loop height="100%">
+            <source src="static/images/CS_Comparison_NOCS.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <!--/ Visual Effects. -->
+
+      <!-- Matting. -->
+      <div class="column">
+        <h2 class="title is-3">Texture Reconstruction</h2>
+        <div class="columns is-centered">
+          <div class="column content">
+            <p>
+              As a byproduct of our method, we can also reconstruct complete 3D models with textures.
+            </p>
+            <video id="texture-reconstruction" autoplay muted loop height="100%">
+              <source src="static/images/CS_with_texture.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!--/ Matting. -->
+
+
+    <!-- Qualitative Results video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Sim2Real Canonical Reconstruction</h2>
+        <div class="content has-text-centered">
+          <p>
+            <span class="dnerf">CenterSnap</span> results in real-home envioronments on ZED2 Camera. Note that in this case, we only trained the model in simulation. 
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Paper video. -->
+    <div class="columns is-centered">
+      <!-- Real Reconstructon with PC.. -->
+      <div class="column">
+        <div class="content">
+          <video id="dollyzoom" autoplay controls muted loop height="100%">
+            <source src="static/images/CS_Real_PC_Reconstruction.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <!--/ Real Reconstructon with PC. -->
+
+      <!-- Real Reconstructon with Mesh. -->
+      <div class="column">
+            <video id="matting-video" autoplay controls muted loop controls height="100%">
+              <source src="static/images/CS_Real_Mesh_Reconstruction.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!--/ Real Reconstructon with Mesh. -->
+
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{park2021nerfies,
+  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
+  title     = {Nerfies: Deformable Neural Radiance Fields},
+  journal   = {ICCV},
+  year      = {2021},
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="https://homes.cs.washington.edu/~kpar/nerfies/videos/nerfies_paper.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content has-text-centered">
+          <p>Page template borrowed from <a href="https://github.com/nerfies/nerfies.github.io"><span class="dnerf">Nerfies</span></a>.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
