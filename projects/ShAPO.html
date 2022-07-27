@@ -36,9 +36,8 @@
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
 
-    <!-- Import the component -->
-  <!-- <script src="./static/js/jquery.min.js"></script>
-  <script type="module" src="./static/js/model-viewer.min.js"></script> -->
+<!-- Import the component -->
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 </head>
 <body>
@@ -192,6 +191,37 @@
       </h2>
     </div>
   </div>
+
+  <div class="columns is-centered is-gapless interpolation-panel">
+    <div class="column">
+      <model-viewer alt="Neil Armstrong's Spacesuit from the Smithsonian Digitization Programs Office and National Air and Space Museum" src="resources/poly.glb" ar ar-modes="webxr scene-viewer quick-look" environment-image="shared-assets/environments/moon_1k.hdr" poster="shared-assets/models/NeilArmstrong.webp" seamless-poster shadow-intensity="1" camera-controls enable-pan></model-viewer>
+      <!-- <model-viewer bounds="tight" enable-pan="" src="resources/poly.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting"> -->
+    </model-viewer></div>
+    <div class="column">
+      <model-viewer bounds="tight" enable-pan="" src="static/assets/multi-layer/1.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting">
+    </model-viewer></div>
+    <div class="column">
+      <model-viewer bounds="tight" enable-pan="" src="static/assets/multi-layer/2.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting">
+    </model-viewer></div>
+    <div class="column">
+      <model-viewer bounds="tight" enable-pan="" src="static/assets/multi-layer/3.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting">
+    </model-viewer></div>
+  </div>
+  <div class="columns is-centered is-gapless interpolation-panel">
+    <div class="column">
+      <model-viewer bounds="tight" enable-pan="" src="static/assets/multi-layer/4.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting">
+    </model-viewer></div>
+    <div class="column">
+      <model-viewer bounds="tight" enable-pan="" src="static/assets/multi-layer/5.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting">
+    </model-viewer></div>
+    <div class="column">
+      <model-viewer bounds="tight" enable-pan="" src="static/assets/multi-layer/6.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting">
+    </model-viewer></div>
+    <div class="column">
+      <model-viewer bounds="tight" enable-pan="" src="static/assets/multi-layer/7.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting">
+    </model-viewer></div>
+  </div>
+  <br>
 
       <!-- <h2 class="title is-3">Reconstruction Results</h2>
         <h3 class="title is-4">Multi-layer Shapes</h3>
