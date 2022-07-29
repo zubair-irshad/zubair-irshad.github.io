@@ -293,13 +293,13 @@ hr {
 }
 
 model-viewer {
-    height: auto;
-    max-width: 50%;
+    height: 120px;
+    width: 160px;
   }
 
 img {
-    height: auto;
-    max-width: 20%
+    height: 120px;
+    width: 160px
 }
 
 input[type=checkbox], input[type=radio] {
