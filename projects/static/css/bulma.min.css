@@ -302,6 +302,12 @@ img {
     width: 160px
 }
 
+#tophat {
+    height: auto;
+    max-width: 4.5%;
+    vertical-align: auto;
+}
+
 input[type=checkbox], input[type=radio] {
     vertical-align: baseline
 }
