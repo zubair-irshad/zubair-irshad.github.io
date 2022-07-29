@@ -292,6 +292,11 @@ hr {
     margin: 1.5rem 0
 }
 
+model-viewer {
+    height: auto;
+    max-width: 50%;
+  }
+
 img {
     height: auto;
     max-width: 20%
