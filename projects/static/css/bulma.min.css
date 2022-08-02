@@ -302,6 +302,12 @@ img {
     width: 160px
 }
 
+#centersnap {
+    height: auto;
+    width: auto;
+    vertical-align: auto;
+}
+
 #tophat {
     height: auto;
     width: 45px;
