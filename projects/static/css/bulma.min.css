@@ -314,6 +314,12 @@ img {
     vertical-align: auto;
 }
 
+#sasra_img {
+    height: auto;
+    width: auto;
+    vertical-align: auto;
+}
+
 input[type=checkbox], input[type=radio] {
     vertical-align: baseline
 }
