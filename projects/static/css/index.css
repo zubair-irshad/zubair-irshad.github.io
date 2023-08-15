@@ -23,6 +23,14 @@ body {
   list-style: none;
 }
 
+.column-3 {
+  position: relative;
+  float: left;
+  width: 40%;
+  left: 8%;
+  list-style: none;
+}
+
 .row {
   /*    display: grid;*/
   grid-auto-flow: row;

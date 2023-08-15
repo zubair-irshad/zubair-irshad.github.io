@@ -210,7 +210,6 @@
 
   <section class="hero teaser">
     <div class="row">
-
       <div class="column-2 ">
         <div class="video-compare-container">
           <video class="video" id="mesh1" loop autoplay muted src="resources/pd_concatenate_0.mp4"
@@ -227,7 +226,6 @@
         </div>
       </div>
     </div>
-
     <div class="row">
       <div class="column-2 ">
         <div class="video-compare-container">
@@ -237,12 +235,24 @@
         </div>
       </div>
 
-      <div class="column-2 ">
+      <div class="column-2">
         <div class="video-compare-container">
           <video class="video" id="mesh4" loop autoplay muted src="resources/pd_concatenate_3.mp4"
             onplay="resizeAndPlay(this)"></video>
           <canvas height="0" class="videoMerge" id="mesh4Merge"></canvas>
         </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-three-fifths">
+        <p>
+          <span class="dnerf">NeO 360 Dataset:</span> Samples from our large scale NeRDS 360 dataset.
+          For each scene, we show different views and annotations i.e. depth (top left), semantic
+          segmentation (top right) and instance segmentation (bottom left), 3D OBBs (bottom right).
+          We use the <a href="https://paralleldomain.com/">Parallel Domain</a> synthetic data generation to render
+          high-fidelity 360&deg; scenes.
+        </p>
       </div>
     </div>
   </section>
@@ -513,7 +523,31 @@
         </div>
       </div>
       <!--/ Matting. -->
+  </section>
 
+  <section class="hero teaser" id="nvs_video">
+    <div class="row">
+      <div class="column-3">
+        <div class="video-compare-container">
+          <video class="video" id="mesh5" loop autoplay muted src="resources/nvs_concatenate_5view.mp4"
+            onplay="resizeAndPlay(this)"></video>
+          <canvas height="0" class="videoMerge" id="mesh5Merge"></canvas>
+        </div>
+      </div>
+
+      <div class="column-3">
+        <div class="video-compare-container">
+          <video class="video" id="mesh6" loop autoplay muted src="resources/nvs_concatenate_3view.mp4"
+            onplay="resizeAndPlay(this)"></video>
+          <canvas height="0" class="videoMerge" id="mesh6Merge"></canvas>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="section" id="scene_decomposition">
+    <div class="container is-max-desktop">
       <!-- Qualitative Scene Decomposition -->
       <div class="columns is-centered has-text-centered">
         <div class="column is-full-width">
@@ -529,25 +563,26 @@
             </p>
           </div>
           <img src="resources/qualitative_main.jpg" alt="Image description" style="width: 100%; height: auto;">
-
         </div>
       </div>
-      <!--/ Paper video. -->
-
-      <!-- Qualitative Joint Optimization. -->
-      <!--/ Paper video. -->
-
-      <!-- Qualitative Shape+texture. -->
-
-      <!-- Qualitative Optimizaiton all. -->
-
-      <!-- Qualitative Optimizaiton all. -->
-
-      <!-- Sergey optim all. -->
-
-      <!-- Sergey optim all. -->
-
+    </div>
   </section>
+  <!--/ Paper video. -->
+
+  <!-- Qualitative Joint Optimization. -->
+  <!--/ Paper video. -->
+
+  <!-- Qualitative Shape+texture. -->
+
+  <!-- Qualitative Optimizaiton all. -->
+
+  <!-- Qualitative Optimizaiton all. -->
+
+  <!-- Sergey optim all. -->
+
+  <!-- Sergey optim all. -->
+
+
 
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
