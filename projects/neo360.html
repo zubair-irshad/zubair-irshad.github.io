@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="NeO 360: Neural Fields for Sparse View Synthesis of Outdoor Scenes">
+  <meta name="keywords" content="Neural Radiance Fields, NeRF, Novel View Synthesis, Autonomous Driving">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NeO 360: Neural Fields for Sparse View Synthesis of Outdoor Scenes</title>
+  <!-- <link rel="icon" type="image/x-icon" href="resources/neo_favicon.png"> -->
+  <!-- <link rel="icon" type="image/x-icon"
+    href="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"> -->
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-124ZVGLK0S"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-124ZVGLK0S');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+  <script src="./static/js/video_comparison.js"></script>
+
+</head>
+
+<body>
+
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div class="navbar-menu">
+      <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+        <a class="navbar-item" href="https://zubairirshad.com">
+          <span class="icon">
+            <i class="fas fa-home"></i>
+          </span>
+        </a>
+
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            More Research
+          </a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://zubair-irshad.github.io/projects/CenterSnap.html">
+              CenterSnap
+            </a>
+            <a class="navbar-item" href="https://zubair-irshad.github.io/projects/ShAPO.html">
+              ShAPO
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </nav>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h3 class="title is-2 publication-title">NeO 360: Neural Fields for Sparse View Synthesis of Outdoor
+              Scenes &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
+              <div class="column is-full_width">
+                <h2 class="title is-4">Interntaional Conference on Computer Vision (ICCV), 2023</h2>
+              </div>
+              <div class="is-size-5 publication-authors">
+                <span class="author-block">
+                  <a href="https://zubairirshad.com">Muhammad Zubair Irshad</a><sup>1</sup>,</span>
+
+                <span class="author-block">
+                  <a href="https://zakharos.github.io/">Sergey Zakharov</a><sup>2</sup>,</span>
+
+                <span class="author-block">
+                  <a href="https://www.thekatherineliu.com/">Katherine Liu</a><sup>2</sup>,</span>
+
+                <span class="author-block">
+                  <a href="https://www.linkedin.com/in/vitorguizilini/">Vitor Guizilini</a><sup>2</sup>,</span>
+
+                <span class="author-block">
+                  <a href="http://www.tkollar.com/site/">Thomas Kollar</a><sup>2</sup>,</span>
+
+
+                <span class="author-block">
+                  <a href="https://adriengaidon.com/">Adrien Gaidon</a><sup>2</sup>,
+                </span>
+
+
+                <span class="author-block">
+                  <a href="https://faculty.cc.gatech.edu/~zk15/">Zsolt Kira*</a><sup>1</sup>,
+                </span>
+
+                <span class="author-block">
+                  <a href="https://www.linkedin.com/in/rare%C8%99-ambru%C8%99-b04812125/">Rares
+                    Ambrus*</a><sup>2</sup>,</span>
+
+              </div>
+
+              <div class="is-size-5 publication-authors">
+                <span class="author-block"><sup>1</sup>Georgia Tech,</span>
+                <span class="author-block"><sup>2</sup>Toyota Research Institute</span>
+              </div>
+
+              <div class="column has-text-centered">
+                <div class="publication-links">
+                  <!-- PDF Link. -->
+                  <span class="link-block">
+                    <a href="https://arxiv.org/pdf/2207.13691.pdf"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>Paper</span>
+                    </a>
+                  </span>
+                  <span class="link-block">
+                    <a href="https://arxiv.org/abs/2207.13691"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="ai ai-arxiv"></i>
+                      </span>
+                      <span>arXiv</span>
+                    </a>
+                  </span>
+
+                  <!-- Dataset Link. -->
+                  <span class="link-block">
+                    <a href="https://colab.research.google.com/github/zubair-irshad/shapo/blob/master/notebook/explore_ShAPO.ipynb"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fa fa-database "></i>
+                      </span>
+                      <span>Dataset</span>
+                    </a>
+                  </span>
+
+
+                  <!-- Code Link. -->
+                  <span class="link-block">
+                    <a href="https://github.com/zubair-irshad/NeO-360"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fab fa-github"></i>
+                      </span>
+                      <span>Code </span>
+                    </a>
+                  </span>
+
+
+                  <!-- Video Link. -->
+                  <span class="link-block">
+                    <a href="https://youtu.be/LMg7NDcLDcA" class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fab fa-youtube"></i>
+                      </span>
+                      <span>Video</span>
+                    </a>
+                  </span>
+
+                  <!-- Poster Link. -->
+                  <!-- <span class="link-block">
+                    <a href="resources/ShAPO_Poster_ECCV2022.pdf"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>Poster</span>
+                    </a>
+                  </span> -->
+                  <!-- Dataset Link. -->
+                  <!-- <span class="link-block">
+                <a href="https://github.com/google/nerfies/releases/tag/0.1"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a> -->
+                </div>
+
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="hero teaser">
+    <div class="row">
+
+      <div class="column-2 ">
+        <div class="video-compare-container">
+          <video class="video" id="mesh1" loop autoplay muted src="resources/pd_concatenate_0.mp4"
+            onplay="resizeAndPlay(this)"></video>
+          <canvas height="0" class="videoMerge" id="mesh1Merge"></canvas>
+        </div>
+      </div>
+
+      <div class="column-2 ">
+        <div class="video-compare-container">
+          <video class="video" id="mesh2" loop autoplay muted src="resources/pd_concatenate_1.mp4"
+            onplay="resizeAndPlay(this)"></video>
+          <canvas height="0" class="videoMerge" id="mesh2Merge"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="column-2 ">
+        <div class="video-compare-container">
+          <video class="video" id="mesh3" loop autoplay muted src="resources/pd_concatenate_2.mp4"
+            onplay="resizeAndPlay(this)"></video>
+          <canvas height="0" class="videoMerge" id="mesh3Merge"></canvas>
+        </div>
+      </div>
+
+      <div class="column-2 ">
+        <div class="video-compare-container">
+          <video class="video" id="mesh4" loop autoplay muted src="resources/pd_concatenate_3.mp4"
+            onplay="resizeAndPlay(this)"></video>
+          <canvas height="0" class="videoMerge" id="mesh4Merge"></canvas>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- <div class="container is-max-desktop">
+      <div class="hero-body">
+
+
+        <div class="video-merge-row">
+          <div class="video-merge-container" id="materialsDiv1">
+            <video class="video" id="reg1" autoplay muted loop src="resources/pd_concatenate_0.mp4"
+              onplay="resizeAndPlay(this)"></video>
+            <canvas height=0 class="videoMerge" id="reg1Merge"></canvas>
+          </div>
+          <div class="video-merge-container" id="materialsDiv2">
+            <video class="video" id="reg2" autoplay muted loop src="resources/pd_concatenate_1.mp4"
+              onplay="resizeAndPlay(this)"></video>
+            <canvas height=0 class="videoMerge" id="reg2Merge"></canvas>
+          </div>
+        </div>
+        <div class="video-merge-row">
+
+          <div class="video-merge-container" id="materialsDiv3">
+            <video class="video" id="reg3" autoplay muted loop src="resources/pd_concatenate_2.mp4"
+              onplay="resizeAndPlay(this)"></video>
+            <canvas height=0 class="videoMerge" id="reg3Merge"></canvas>
+          </div>
+          <div class="video-merge-container" id="materialsDiv4">
+            <video class="video" id="reg4" autoplay muted loop src="resources/pd_concatenate_3.mp4"
+              onplay="resizeAndPlay(this)"></video>
+            <canvas height=0 class="videoMerge" id="reg4Merge"></canvas>
+          </div>
+        </div>
+      </div>
+
+      <div class="content has-text-centered">
+        <p>
+          <span class="dnerf">NeO 360 Dataset:</span> Samples from our large scale NeRDS 360 dataset.
+          For each scene, we show different views and annotations i.e. depth (top left), semantic
+          segmentation (top right) and instance segmentation (bottom left), 3D OBBs (bottom right).
+        </p>
+      </div>
+    </div> -->
+
+
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Recent implicit neural representations have shown great
+              results for novel-view synthesis. However, existing methods
+              require expensive per-scene optimization from many views
+              hence limiting their application to real-world unbounded
+              urban settings where the objects of interest or backgrounds
+              are observed from very few views.
+            </p>
+            <p>
+              To miti-gate this challenge, we introduce a new approach called
+              NeO 360, Neural fields for few-view view synthesis of out-
+              door scenes. NeO 360 is a generalizable method that re-
+              constructs 360◦ scenes from a single or a few posed RGB
+              images. The essence of our approach is in capturing the
+              distribution of complex real-world outdoor 3D scenes and
+              using a hybrid image-conditional tri-planar representation
+              that can be queried from any world point. Our representa-
+              tion combines the best of both voxel-based representations
+              and bird’s-eye-view (BEV) representations and is effective
+              and more expressive than each. NeO 360’s representation
+              allows us to learn from a large collection of unbounded
+              3D scenes while offering generalizability to new views and
+              novel scenes from as few as a single image during infer-
+              ence.
+
+            </p>
+            <p>
+              We demonstrate
+              our approach on our proposed challenging 360&deg; unbounded
+              dataset, called NeRDS360 and show that NeRO outperforms
+              state-of-the art generalizable methods for novel-viewsynthesis while also offering editing and
+              composition capabilities.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--/ Abstract. -->
+
+      <br>
+
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3">NERDS 360 Multi-View dataset for Outdoor Scenes</h2>
+          <div class="content has-text-centered">
+            <p>
+              NeRDS 360: "NeRF for Reconstruction, Decomposition and Scene Synthesis of 360° outdoor scenes” dataset
+              comprising 75 unbounded scenes with full multi-view annotations and
+              diverse scenes for generalizable NeRF training and evaluation.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- NERDS360 dataset Dataset top. -->
+      <div class="columns is-centered">
+        <!-- Visual Effects. -->
+        <div class="column">
+          <div class="content">
+            <video id="nocs_comparison" autoplay muted loop height="100%">
+              <source src="resources/pd_camera_0.mp4" type="video/mp4">
+            </video>
+            <p>
+              <i>SF 6th And Mission Enviornment:</i> 3 Source cameras (Shown in Red), 100 evaluation Cameras (Shown in
+              green).
+            </p>
+          </div>
+        </div>
+        <!--/ Visual Effects. -->
+
+        <!-- Matting. -->
+        <div class="column">
+          <div class="columns is-centered">
+            <div class="column content">
+              <video id="texture-reconstruction" autoplay muted loop height="100%">
+                <source src="resources/pd_camera_1.mp4" type="video/mp4">
+              </video>
+              <p>
+                <i>SF Grant and California Enviornment:</i> 5 Source cameras (Shown in Red), 100 evaluation Cameras
+                (Shown in
+                green).
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <!--/ Matting. -->
+
+      <!-- NERDS360 dataset Dataset bottom. -->
+      <div class="columns is-centered">
+        <!-- Visual Effects. -->
+        <div class="column">
+          <div class="content">
+            <video id="nocs_comparison" autoplay muted loop height="100%">
+              <source src="resources/pd_camera_2.mp4" type="video/mp4">
+            </video>
+            <p>
+              <i>SF VanNess Ave and Turk Enviornment:</i> Training distribution (Shown in Blue), Evaluation Cameras
+              Distribution (Shown in
+              green).
+            </p>
+          </div>
+        </div>
+        <!--/ Visual Effects. -->
+
+        <!-- Matting. -->
+        <div class="column">
+          <div class="columns is-centered">
+            <div class="column content">
+              <video id="texture-reconstruction" autoplay muted loop height="100%">
+                <source src="resources/pd_camera_3.mp4" type="video/mp4">
+              </video>
+              <p>
+                <i>SF 6th and Mission Enviornment:</i> Training distribution (Shown in Blue), Evaluation Cameras
+                Distribution (Shown in
+                green).
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <!--/ Matting. -->
+
+      <!-- Method. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3">Method</h2>
+          <div class="content has-text-centered">
+            <p>
+              Overview: a) Given just a single or a few input images from a novel
+              scene, our method reconstructs and renders
+              new 360&deg; views of complex unbounded outdoor scenes b) We achieve this by constructing an
+              image-conditional triplane
+              representation to model the 3D surrounding from various perspectives. c) Our method generalizes across
+              novel scenes and viewpoints for complex 360&deg; outdoor scenes.
+            </p>
+          </div>
+
+          <img src="resources/NEO_Website_1.jpg" alt="Image description" style="width: 100%; height: auto;">
+
+          <!-- <video id="method" autoplay muted loop height="100%">
+              <source src="resources/architecture720p.mp4" type="video/mp4">
+            </video> -->
+        </div>
+      </div>
+
+      <br>
+      <!-- Architecture -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3">Architecture</h2>
+          <div class="content has-text-centered">
+            <p>
+              <span class="dnerf">NeO 360</span> Architecture: Our method effectively uses local features to infer an
+              image-conditional triplanar representation for both
+              backgrounds and foregrounds. These triplanar features are obtained after orthogonally projecting
+              positions (x) into each
+              plane and bilinearly interpolating feature vectors. Dedicated NeRF decoder MLPs are used to regress
+              density and color each
+              for foreground and backgrounds
+            </p>
+          </div>
+
+          <img src="resources/NEO_Architecture.JPG" alt="Image description" style="width: 100%; height: auto;">
+
+          <!-- <video id="method" autoplay muted loop height="100%">
+              <source src="resources/architecture720p.mp4" type="video/mp4">
+            </video> -->
+        </div>
+      </div>
+
+
+      <br>
+      <!-- Paper video. -->
+      <!--/ Paper video. -->
+
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3">Qualitative Novel-View Synthesis Results</h2>
+          <div class="content has-text-centered">
+            <p>
+              NeRDS 360: "NeRF for Reconstruction, Decomposition and Scene Synthesis of 360° outdoor scenes” dataset
+              comprising 75 unbounded scenes with full multi-view annotations and
+              diverse scenes for generalizable NeRF training and evaluation.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- NERDS360 dataset Dataset top. -->
+      <div class="columns is-centered">
+        <!-- Visual Effects. -->
+        <div class="column">
+          <div class="content">
+            <img src="resources/qualitative_nvs.jpg" alt="Image description" style="width: 100%; height: auto;">
+            <p>
+              <i>Qualitative 3-view view synthesis results:</i> Comparisons with baselines.
+            </p>
+          </div>
+        </div>
+        <!--/ Visual Effects. -->
+
+        <!-- Matting. -->
+        <div class="column">
+          <div class="columns is-centered">
+            <div class="column content">
+              <img src="resources/qualitative_nvs_pixelnerf.jpg" alt="Image description"
+                style="width: 97%; height: auto;">
+              <p>
+                <i>Qualitative 3-view view synthesis results:</i> Close-up comparison with PixelNeRF
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <!--/ Matting. -->
+
+      <!-- Qualitative Scene Decomposition -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3">Qualitative Scene Decompisition</h2>
+          <div class="content has-text-centered">
+            <p>
+              <span class="dnerf">NeO 360</span> scene decomposition qualitative results: showing 3-view scene
+              decomposed individual objects
+              along with novel views on the NeRDS360 dataset. Our approach performs accurate decomposition by sampling
+              inside the
+              3D bounding boxes of the objects; hence giving full control over object editability from very few input
+              views
+            </p>
+          </div>
+          <img src="resources/qualitative_main.jpg" alt="Image description" style="width: 100%; height: auto;">
+
+        </div>
+      </div>
+      <!--/ Paper video. -->
+
+      <!-- Qualitative Joint Optimization. -->
+      <!--/ Paper video. -->
+
+      <!-- Qualitative Shape+texture. -->
+
+      <!-- Qualitative Optimizaiton all. -->
+
+      <!-- Qualitative Optimizaiton all. -->
+
+      <!-- Sergey optim all. -->
+
+      <!-- Sergey optim all. -->
+
+  </section>
+
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@inproceedings{irshad2022shapo,
+  title={ShAPO: Implicit Representations for Multi Object Shape Appearance and Pose Optimization},
+  author={Muhammad Zubair Irshad and Sergey Zakharov and Rares Ambrus and Thomas Kollar and Zsolt Kira and Adrien Gaidon},
+  journal={European Conference on Computer Vision (ECCV)},
+  year={2022},
+  url={https://arxiv.org/abs/2207.13691},
+}</code></pre>
+    </div>
+  </section>
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="content has-text-centered">
+        <a class="icon-link" href="https://arxiv.org/pdf/2207.13691.pdf">
+          <i class="fas fa-file-pdf"></i>
+        </a>
+        <a class="icon-link" href="https://github.com/zubair-irshad" class="external-link" disabled>
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content has-text-centered">
+            <p>Page template borrowed from <a href="https://github.com/nerfies/nerfies.github.io"><span
+                  class="dnerf">Nerfies</span></a>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
