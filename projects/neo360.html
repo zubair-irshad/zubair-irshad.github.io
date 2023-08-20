@@ -249,9 +249,9 @@
         <p>
           <span class="dnerf">NeO 360 Dataset:</span> Samples from our large scale NeRDS 360 dataset.
           For each scene, we show different views and annotations i.e. depth (top left), semantic
-          segmentation (top right) and instance segmentation (bottom left), 3D OBBs (bottom right).
-          We use the <a href="https://paralleldomain.com/">Parallel Domain</a> synthetic data generation to render
-          high-fidelity 360&deg; scenes.
+          segmentation (top right), instance segmentation (bottom left) and 3D OBBs (bottom right).
+          We use the <a href="https://paralleldomain.com/">Parallel Domain</a> synthetic data generation to
+          render high-fidelity 360&deg; scenes.
         </p>
       </div>
     </div>
@@ -314,21 +314,20 @@
               are observed from very few views.
             </p>
             <p>
-              To miti-gate this challenge, we introduce a new approach called
-              NeO 360, Neural fields for few-view view synthesis of out-
-              door scenes. NeO 360 is a generalizable method that re-
-              constructs 360◦ scenes from a single or a few posed RGB
-              images. The essence of our approach is in capturing the
-              distribution of complex real-world outdoor 3D scenes and
-              using a hybrid image-conditional tri-planar representation
-              that can be queried from any world point. Our representa-
-              tion combines the best of both voxel-based representations
-              and bird’s-eye-view (BEV) representations and is effective
-              and more expressive than each. NeO 360’s representation
-              allows us to learn from a large collection of unbounded
-              3D scenes while offering generalizability to new views and
-              novel scenes from as few as a single image during infer-
-              ence.
+              To mitigate this challenge, we introduce a new approach called NeO 360, Neural
+              fields for few-view view synthesis of outdoor scenes. NeO
+              360 is a generalizable method that reconstructs 360&deg;
+              scenes from a single or a few posed RGB
+              images. The essence
+              of our approach is in capturing the distribution of complex
+              real-world outdoor 3D scenes and using a hybrid image-
+              conditional tri-planar representation that can be queried
+              from any world point. Our representation combines the best
+              of both voxel-based and bird’s-eye-view (BEV) representa-
+              tions and is more effective and expressive than each. NeO
+              360’s representation allows us to learn from a large collec-
+              tion of unbounded 3D scenes while offering generalizability to new views and
+              novel scenes from as few as a single image during inference.
 
             </p>
             <p>
@@ -487,9 +486,12 @@
           <h2 class="title is-3">Qualitative Novel-View Synthesis Results</h2>
           <div class="content has-text-centered">
             <p>
-              NeRDS 360: "NeRF for Reconstruction, Decomposition and Scene Synthesis of 360° outdoor scenes” dataset
-              comprising 75 unbounded scenes with full multi-view annotations and
-              diverse scenes for generalizable NeRF training and evaluation.
+              Our method excels in novel-view synthesis from 3 source views, outperforming strong generalizable
+              NeRF baselines. Vanilla NeRF struggles due to overfitting on these 3 views. MVSNeRF, although
+              generalizable, is limited to nearby views as stated in the original paper, and
+              thus struggles with distant views in this more challenging
+              task whereas PixelNeRF’s renderings also produce artifacts
+              for far backgrounds.
             </p>
           </div>
         </div>
