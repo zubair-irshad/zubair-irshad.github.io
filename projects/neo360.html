@@ -527,11 +527,12 @@
       <!--/ Matting. -->
   </section>
 
+
   <section class="hero teaser" id="nvs_video">
     <div class="row">
       <div class="column-3">
         <div class="video-compare-container">
-          <video class="video" id="mesh5" loop autoplay muted src="resources/nvs_concatenate_5view.mp4"
+          <video class="video" id="mesh5" loop autoplay muted src="resources/nvs_concatenate_5view_sf1.mp4"
             onplay="resizeAndPlay(this)"></video>
           <canvas height="0" class="videoMerge" id="mesh5Merge"></canvas>
         </div>
@@ -539,96 +540,115 @@
 
       <div class="column-3">
         <div class="video-compare-container">
-          <video class="video" id="mesh6" loop autoplay muted src="resources/nvs_concatenate_3view.mp4"
+          <video class="video" id="mesh6" loop autoplay muted src="resources/nvs_concatenate_3view_sf2.mp4"
             onplay="resizeAndPlay(this)"></video>
           <canvas height="0" class="videoMerge" id="mesh6Merge"></canvas>
         </div>
       </div>
     </div>
 
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-three-fifths">
-        <p>
-          Qualitative 360&deg; comparison with PixelNeRF showing 5-view novel view synthesis (left)
-          and 3-view view synthesis (right).
-          Our method is able to render sharper scenes with more details and less artifacts.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="scene_decomposition">
-    <div class="container is-max-desktop">
-      <!-- Qualitative Scene Decomposition -->
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-full-width">
-          <h2 class="title is-3">Qualitative Scene Decompisition</h2>
-          <div class="content has-text-centered">
-            <p>
-              <span class="dnerf">NeO 360</span> scene decomposition qualitative results: showing 3-view scene
-              decomposed individual objects
-              along with novel views on the NeRDS360 dataset. Our approach performs accurate decomposition by sampling
-              inside the
-              3D bounding boxes of the objects; hence giving full control over object editability from very few input
-              views
-            </p>
+    <section class="hero teaser" id="nvs_video">
+      <div class="row">
+        <div class="column-3">
+          <div class="video-compare-container">
+            <video class="video" id="mesh7" loop autoplay muted src="resources/nvs_concatenate_5view.mp4"
+              onplay="resizeAndPlay(this)"></video>
+            <canvas height="0" class="videoMerge" id="mesh7Merge"></canvas>
           </div>
-          <img src="resources/qualitative_main.jpg" alt="Image description" style="width: 100%; height: auto;">
+        </div>
+
+        <div class="column-3">
+          <div class="video-compare-container">
+            <video class="video" id="mesh8" loop autoplay muted src="resources/nvs_concatenate_3view.mp4"
+              onplay="resizeAndPlay(this)"></video>
+            <canvas height="0" class="videoMerge" id="mesh8Merge"></canvas>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
-  <!--/ Paper video. -->
 
-  <!-- Qualitative Joint Optimization. -->
-  <!--/ Paper video. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-three-fifths">
+          <p>
+            Qualitative 360&deg; comparison with PixelNeRF showing 5-view novel view synthesis (left)
+            and 3-view view synthesis (right).
+            Our method is able to render sharper scenes with more details and less artifacts.
+          </p>
+        </div>
+      </div>
+    </section>
 
-  <!-- Qualitative Shape+texture. -->
+    <section class="section" id="scene_decomposition">
+      <div class="container is-max-desktop">
+        <!-- Qualitative Scene Decomposition -->
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-full-width">
+            <h2 class="title is-3">Qualitative Scene Decompisition</h2>
+            <div class="content has-text-centered">
+              <p>
+                <span class="dnerf">NeO 360</span> scene decomposition qualitative results: showing 3-view scene
+                decomposed individual objects
+                along with novel views on the NeRDS360 dataset. Our approach performs accurate decomposition by sampling
+                inside the
+                3D bounding boxes of the objects; hence giving full control over object editability from very few input
+                views
+              </p>
+            </div>
+            <img src="resources/qualitative_main.jpg" alt="Image description" style="width: 100%; height: auto;">
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--/ Paper video. -->
 
-  <!-- Qualitative Optimizaiton all. -->
+    <!-- Qualitative Joint Optimization. -->
+    <!--/ Paper video. -->
 
-  <!-- Qualitative Optimizaiton all. -->
+    <!-- Qualitative Shape+texture. -->
 
-  <!-- Sergey optim all. -->
+    <!-- Qualitative Optimizaiton all. -->
 
-  <!-- Sergey optim all. -->
+    <!-- Qualitative Optimizaiton all. -->
+
+    <!-- Sergey optim all. -->
+
+    <!-- Sergey optim all. -->
 
 
 
-  <section class="section" id="BibTeX">
-    <div class="container is-max-desktop content">
-      <h2 class="title">BibTeX</h2>
-      <pre><code>@inproceedings{irshad2022shapo,
+    <section class="section" id="BibTeX">
+      <div class="container is-max-desktop content">
+        <h2 class="title">BibTeX</h2>
+        <pre><code>@inproceedings{irshad2022shapo,
   title={ShAPO: Implicit Representations for Multi Object Shape Appearance and Pose Optimization},
   author={Muhammad Zubair Irshad and Sergey Zakharov and Rares Ambrus and Thomas Kollar and Zsolt Kira and Adrien Gaidon},
   journal={European Conference on Computer Vision (ECCV)},
   year={2022},
   url={https://arxiv.org/abs/2207.13691},
 }</code></pre>
-    </div>
-  </section>
-
-
-  <footer class="footer">
-    <div class="container">
-      <div class="content has-text-centered">
-        <a class="icon-link" href="https://arxiv.org/pdf/2207.13691.pdf">
-          <i class="fas fa-file-pdf"></i>
-        </a>
-        <a class="icon-link" href="https://github.com/zubair-irshad" class="external-link" disabled>
-          <i class="fab fa-github"></i>
-        </a>
       </div>
-      <div class="columns is-centered">
-        <div class="column is-8">
-          <div class="content has-text-centered">
-            <p>Page template borrowed from <a href="https://github.com/nerfies/nerfies.github.io"><span
-                  class="dnerf">Nerfies</span></a>.</p>
+    </section>
+
+
+    <footer class="footer">
+      <div class="container">
+        <div class="content has-text-centered">
+          <a class="icon-link" href="https://arxiv.org/pdf/2207.13691.pdf">
+            <i class="fas fa-file-pdf"></i>
+          </a>
+          <a class="icon-link" href="https://github.com/zubair-irshad" class="external-link" disabled>
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+        <div class="columns is-centered">
+          <div class="column is-8">
+            <div class="content has-text-centered">
+              <p>Page template borrowed from <a href="https://github.com/nerfies/nerfies.github.io"><span
+                    class="dnerf">Nerfies</span></a>.</p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </footer>
+    </footer>
 
 </body>
 
