@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="ShAPO: Implicit Representations for Multi Object Shape Appearance and Pose Optimization.">
+    content="ShAPO: Implicit Representations for Multi Object Shape Appearance and Pose Optimization.">
   <meta name="keywords" content="3D Reconstruction, texture-reconstruction, 6D Pose Estimation">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>ShAPO: Implicit Representations for Multi Object Shape Appearance and Pose Optimization.</title>
@@ -13,21 +14,19 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-124ZVGLK0S"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
 
     gtag('config', 'G-124ZVGLK0S');
   </script>
 
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-        rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
   <link rel="stylesheet" href="./static/css/bulma.min.css">
   <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
   <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -36,149 +35,152 @@
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
 
-<!-- Import the component -->
-<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <!-- Import the component -->
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 </head>
+
 <body>
 
-<nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
-  <div class="navbar-menu">
-    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item" href="https://zubairirshad.com">
-      <span class="icon">
-          <i class="fas fa-home"></i>
-      </span>
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
       </a>
-
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          More Research
+    </div>
+    <div class="navbar-menu">
+      <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+        <a class="navbar-item" href="https://zubairirshad.com">
+          <span class="icon">
+            <i class="fas fa-home"></i>
+          </span>
         </a>
-        <div class="navbar-dropdown">
-          <a class="navbar-item" href="https://zubair-irshad.github.io/projects/CenterSnap.html">
-            CenterSnap
+
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            More Research
           </a>
-          <a class="navbar-item" href="https://zubair-irshad.github.io/projects/robo-vln.html">
-            Robo-VLN
-          </a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://zubair-irshad.github.io/projects/CenterSnap.html">
+              CenterSnap
+            </a>
+            <a class="navbar-item" href="https://zubair-irshad.github.io/projects/robo-vln.html">
+              Robo-VLN
+            </a>
+          </div>
         </div>
       </div>
+
     </div>
-
-  </div>
-</nav>
+  </nav>
 
 
-<section class="hero">
-  <div class="hero-body">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered">
-        <div class="column has-text-centered">
-          <h3 class="title is-2 publication-title">ShAPO  <img src="./resources/icon.png" id="tophat">: Implicit Representations for Multi Object Shape Appearance and Pose Optimization&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
-            <div class="column is-full_width">
-              <h2 class="title is-4">European Conference on Computer Vision (ECCV), 2022</h2>
-            </div>          
-            <div class="is-size-5 publication-authors">
-            <span class="author-block">
-              <a href="https://zubairirshad.com">Muhammad Zubair Irshad*</a><sup>1</sup>,</span>
-            <span class="author-block">
-              <a href="https://zakharos.github.io/">Sergey Zakharov*</a><sup>2</sup>,</span>
-              <span class="author-block">
-                <a href="https://www.linkedin.com/in/rare%C8%99-ambru%C8%99-b04812125/">Rares Ambrus</a><sup>2</sup>,</span>
-
-              <span class="author-block">
-              <a href="http://www.tkollar.com/site/">Thomas Kollar</a><sup>2</sup>,</span>
-            <span class="author-block">
-              <a href="https://faculty.cc.gatech.edu/~zk15/">Zsolt Kira</a><sup>1</sup>
-            </span>
-            <span class="author-block">
-              <a href="https://adriengaidon.com/">Adrien Gaidon</a><sup>2</sup>
-            </span>
-          </div>
-
-          <div class="is-size-5 publication-authors">
-            <h2 class="is-size-6">*Equal Contribution</h2>
-            <!-- <h2 class="is-size-6">(* equal contribution)  (<span>&#8224;</span> corresponding author)</h2> -->
-          </div>
-
-          <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>Georgia Tech,</span>
-            <span class="author-block"><sup>2</sup>Toyota Research Institute</span>
-          </div>
-
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
           <div class="column has-text-centered">
-            <div class="publication-links">
-              <!-- PDF Link. -->
-              <span class="link-block">
-                <a href="https://arxiv.org/pdf/2207.13691.pdf"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fas fa-file-pdf"></i>
-                  </span>
-                  <span>Paper</span>
-                </a>
-              </span>
-              <span class="link-block">
-                <a href="https://arxiv.org/abs/2207.13691"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
-              <!-- Video Link. -->
-              <span class="link-block">
-                <a href="https://youtu.be/LMg7NDcLDcA"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-youtube"></i>
-                  </span>
-                  <span>Video</span>
-                </a>
-              </span>
-              <!-- Code Link. -->
-              <span class="link-block">
-                <a href="https://github.com/zubair-irshad/shapo"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-github"></i>
-                  </span>
-                  <span>Code </span>
-                  </a>
-              </span>
+            <h3 class="title is-2 publication-title">ShAPO <img src="./resources/icon.png" id="tophat">: Implicit
+              Representations for Multi Object Shape Appearance and Pose
+              Optimization&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
+              <div class="column is-full_width">
+                <h2 class="title is-4">European Conference on Computer Vision (ECCV), 2022</h2>
+              </div>
+              <div class="is-size-5 publication-authors">
+                <span class="author-block">
+                  <a href="https://zubairirshad.com">Muhammad Zubair Irshad*</a><sup>1</sup>,</span>
+                <span class="author-block">
+                  <a href="https://zakharos.github.io/">Sergey Zakharov*</a><sup>2</sup>,</span>
+                <span class="author-block">
+                  <a href="https://www.linkedin.com/in/rare%C8%99-ambru%C8%99-b04812125/">Rares
+                    Ambrus</a><sup>2</sup>,</span>
 
-              <!-- Google Collab Link. -->
-              <span class="link-block">
-                <a href="https://colab.research.google.com/github/zubair-irshad/shapo/blob/master/notebook/explore_ShAPO.ipynb"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fi-xnsuxl-google-colab"></i>
-                  </span>
-                  <span>Colab Notebook</span>
-                </a>
-              </span>
+                <span class="author-block">
+                  <a href="http://www.tkollar.com/site/">Thomas Kollar</a><sup>2</sup>,</span>
+                <span class="author-block">
+                  <a href="https://faculty.cc.gatech.edu/~zk15/">Zsolt Kira</a><sup>1</sup>
+                </span>
+                <span class="author-block">
+                  <a href="https://adriengaidon.com/">Adrien Gaidon</a><sup>2</sup>
+                </span>
+              </div>
 
-              <!-- Poster Link. -->
-              <span class="link-block">
-                <a href="resources/ShAPO_Poster_ECCV2022.pdf"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fas fa-file-pdf"></i>
+              <div class="is-size-5 publication-authors">
+                <h2 class="is-size-6">*Equal Contribution</h2>
+                <!-- <h2 class="is-size-6">(* equal contribution)  (<span>&#8224;</span> corresponding author)</h2> -->
+              </div>
+
+              <div class="is-size-5 publication-authors">
+                <span class="author-block"><sup>1</sup>Georgia Tech,</span>
+                <span class="author-block"><sup>2</sup>Toyota Research Institute</span>
+              </div>
+
+              <div class="column has-text-centered">
+                <div class="publication-links">
+                  <!-- PDF Link. -->
+                  <span class="link-block">
+                    <a href="https://arxiv.org/pdf/2207.13691.pdf"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>Paper</span>
+                    </a>
                   </span>
-                  <span>Poster</span>
-                  </a>
-              </span>
-              <!-- Dataset Link. -->
-              <!-- <span class="link-block">
+                  <span class="link-block">
+                    <a href="https://arxiv.org/abs/2207.13691"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="ai ai-arxiv"></i>
+                      </span>
+                      <span>arXiv</span>
+                    </a>
+                  </span>
+                  <!-- Video Link. -->
+                  <span class="link-block">
+                    <a href="https://youtu.be/LMg7NDcLDcA" class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fab fa-youtube"></i>
+                      </span>
+                      <span>Video</span>
+                    </a>
+                  </span>
+                  <!-- Code Link. -->
+                  <span class="link-block">
+                    <a href="https://github.com/zubair-irshad/shapo"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fab fa-github"></i>
+                      </span>
+                      <span>Code </span>
+                    </a>
+                  </span>
+
+                  <!-- Google Collab Link. -->
+                  <span class="link-block">
+                    <a href="https://colab.research.google.com/github/zubair-irshad/shapo/blob/master/notebook/explore_ShAPO.ipynb"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fi-xnsuxl-google-colab"></i>
+                      </span>
+                      <span>Colab Notebook</span>
+                    </a>
+                  </span>
+
+                  <!-- Poster Link. -->
+                  <span class="link-block">
+                    <a href="resources/ShAPO_Poster_ECCV2022.pdf"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>Poster</span>
+                    </a>
+                  </span>
+                  <!-- Dataset Link. -->
+                  <!-- <span class="link-block">
                 <a href="https://github.com/google/nerfies/releases/tag/0.1"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -186,37 +188,37 @@
                   </span>
                   <span>Data</span>
                   </a> -->
-            </div>
+                </div>
 
+              </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
 
-      <video id="method" autoplay muted loop height="100%">
-        <source src="resources/ShAPO_teaser.mp4"
-                type="video/mp4">
-      </video>
+        <video id="method" autoplay muted loop height="100%">
+          <source src="resources/ShAPO_teaser.mp4" type="video/mp4">
+        </video>
 
-    <!-- <img src="resour/images/Pose_CenterSnap.gif"
+        <!-- <img src="resour/images/Pose_CenterSnap.gif"
       class="interpolation-image"
       alt="Interpolate start reference image."/> -->
-      <!-- <video id="teaser" autoplay muted loop height="100%">
+        <!-- <video id="teaser" autoplay muted loop height="100%">
         <source src="static/images/CS_Pose.mp4"
                 type="video/mp4">
       </video> -->
-      <h2 class="subtitle has-text-centered">
-        <span class="dnerf">ShAPO:</span> A framework for holistic object-centric 3D scene understanding. ShAPO reconstructs 3D shape, appearance and estimates the 6D pose and sizes of novel object instances.
-      </h2>
+        <h2 class="subtitle has-text-centered">
+          <span class="dnerf">ShAPO:</span> A framework for holistic object-centric 3D scene understanding. ShAPO
+          reconstructs 3D shape, appearance and estimates the 6D pose and sizes of novel object instances.
+        </h2>
+      </div>
     </div>
-  </div>
-      <!-- <h2 class="title is-3">Reconstruction Results</h2>
+    <!-- <h2 class="title is-3">Reconstruction Results</h2>
         <h3 class="title is-4">Multi-layer Shapes</h3>
     <div class="content has-text-justified">
       <p>
@@ -228,7 +230,7 @@
     <div class="column">
       <model-viewer alt="Neil Armstrong's Spacesuit from the Smithsonian Digitization Programs Office and National Air and Space Museum" src="static/predicted_mesh_1.glb" seamless-poster shadow-intensity="1" camera-controls enable-pan></model-viewer> -->
 
-      <!-- <model-viewer bounds="tight" enable-pan="" src="./static/predicted_mesh_1.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting"> -->
+    <!-- <model-viewer bounds="tight" enable-pan="" src="./static/predicted_mesh_1.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting"> -->
     <!-- </model-viewer></div>
     <div class="column">
       <model-viewer bounds="tight" enable-pan="" src="./static/predicted_mesh_2.ply" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting">
@@ -241,7 +243,7 @@
     </model-viewer></div>
     </div>
 </section> -->
-<!-- <section class="hero is-light is-small">
+    <!-- <section class="hero is-light is-small">
   <div class="hero-body">
     <div class="container">
       <div id="results-carousel" class="carousel results-carousel">
@@ -297,308 +299,377 @@
     </div>
   </div>
 </section> -->
-<section class="section">
-  <div class="container is-max-desktop">
-    <!-- Abstract. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            Our method studies the complex task of holistic object-centric 3D understanding from a single RGB-D observation. As it is an ill-posed problem, existing methods suffer from low performance for both 3D shape and 6D pose estimation in complex multi-object scenarios with occlusions. We present ShAPO, a method for joint multi-object detection, 3D textured reconstruction, 6D object pose and size estimation.
-          </p>
-          <p>
-            Key to ShAPO is a single-shot pipeline to regress shape, appearance and
-            pose latent codes along with the masks of each object instance, which
-            is then further refined in a sparse-to-dense fashion. A novel disentangled
-            shape and appearance code is first learned to embed objects in their
-            respective shape and appearance space. We also propose a novel, octree-
-            based differentiable optimization step, allowing us to further improve
-            object shape, pose and appearance simultaneously under the learned latent space, in an analysis-by-synthesis fashion. Our novel joint implicit
-            textured object representation allows us to accurately identify and recon-
-            struct novel unseen objects without having access to their 3D meshes.
-            Through extensive experiments, we show that our method, trained on
-            simulated indoor scenes, accurately regresses the shape, appearance and
-            pose of novel objects in the real-world with minimal fine-tuning.
-          </p>
-          <p>
-            Our method significantly out-performs all baselines on the NOCS dataset with 
-            an 8% absolute improvement in mAP for 6D pose estimation.
-          </p>
+    <section class="section">
+      <div class="container is-max-desktop">
+        <!-- Abstract. -->
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Abstract</h2>
+            <div class="content has-text-justified">
+              <p>
+                Our method studies the complex task of holistic object-centric 3D understanding from a single RGB-D
+                observation. As it is an ill-posed problem, existing methods suffer from low performance for both 3D
+                shape and 6D pose estimation in complex multi-object scenarios with occlusions. We present ShAPO, a
+                method for joint multi-object detection, 3D textured reconstruction, 6D object pose and size estimation.
+              </p>
+              <p>
+                Key to ShAPO is a single-shot pipeline to regress shape, appearance and
+                pose latent codes along with the masks of each object instance, which
+                is then further refined in a sparse-to-dense fashion. A novel disentangled
+                shape and appearance code is first learned to embed objects in their
+                respective shape and appearance space. We also propose a novel, octree-
+                based differentiable optimization step, allowing us to further improve
+                object shape, pose and appearance simultaneously under the learned latent space, in an
+                analysis-by-synthesis fashion. Our novel joint implicit
+                textured object representation allows us to accurately identify and recon-
+                struct novel unseen objects without having access to their 3D meshes.
+                Through extensive experiments, we show that our method, trained on
+                simulated indoor scenes, accurately regresses the shape, appearance and
+                pose of novel objects in the real-world with minimal fine-tuning.
+              </p>
+              <p>
+                Our method significantly out-performs all baselines on the NOCS dataset with
+                an 8% absolute improvement in mAP for 6D pose estimation.
+              </p>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-    <!--/ Abstract. -->
+        <!--/ Abstract. -->
 
-    <!-- Method video. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Method</h2>
+        <!-- Method video. -->
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-full-width">
+            <h2 class="title is-3">Method</h2>
+            <div class="content has-text-centered">
+              <p>
+                <span class="dnerf">ShAPO</span> uses two-stages for 3D shape and appearance reconstruction and 6D pose
+                and size estimation; First, a single-shot network to predict 3D shape, pose and size codes along with
+                segmentation masks in a per-pixel manner. Second, test-time optimization of joint shape, pose and size
+                codes given a single-view RGB-D observation of a new instance.
+              </p>
+            </div>
+            <video id="method" autoplay muted loop height="100%">
+              <source src="resources/architecture720p.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+        <!--/ Method video. -->
+        <div class="columns is-centered has-text-centered">
+          <h2 class="title is-3">Reconstruction Results</h2>
+        </div>
         <div class="content has-text-centered">
           <p>
-            <span class="dnerf">ShAPO</span> uses two-stages for 3D shape and appearance reconstruction and 6D pose and size estimation; First, a single-shot network to predict 3D shape, pose and size codes along with segmentation masks in a per-pixel manner. Second, test-time optimization of joint shape, pose and size codes given a single-view RGB-D observation of a new instance.
+            From left to right, we show an interactive visualization of the 6D poses and 5 reconstructed objects along
+            with their appearance from a single-view RGB-D observation.
           </p>
         </div>
-        <video id="method" autoplay muted loop height="100%">
-          <source src="resources/architecture720p.mp4"
-                  type="video/mp4">
-        </video>
-      </div>
-    </div>
-    <!--/ Method video. -->
-    <div class="columns is-centered has-text-centered">
-      <h2 class="title is-3">Reconstruction Results</h2>
-    </div>
-    <div class="content has-text-centered">
-      <p>
-      From left to right, we show an interactive visualization of the 6D poses and 5 reconstructed objects along with their appearance from a single-view RGB-D observation.  
-      </p>
-    </div>
-    <div class="columns is-centered is-gapless interpolation-panel">
-      <img src="./resources/0018_color.png" >
-      <div class="column">
-        <model-viewer bounds="tight" enable-pan="" src="meshes/scene_3/mesh_net00.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" environment-image="neutral" shadow-intensity="1" camera-orbit="45deg 75deg auto" ar-status="not-presenting">
-      </model-viewer></div>
-      <div class="column">
-        <model-viewer bounds="tight" enable-pan="" src="meshes/scene_3/mesh_net01.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" environment-image="neutral" shadow-intensity="1" camera-orbit="45deg 75deg auto" ar-status="not-presenting">
-      </model-viewer></div>
-      <div class="column">
-        <model-viewer bounds="tight" enable-pan="" src="meshes/scene_3/mesh_net02.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" environment-image="neutral" shadow-intensity="1" camera-orbit="45deg 75deg auto" ar-status="not-presenting">
-      </model-viewer></div>
-      <div class="column">
-        <model-viewer bounds="tight" enable-pan="" src="meshes/scene_3/mesh_net03.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" environment-image="neutral" shadow-intensity="1" camera-orbit="45deg 75deg auto" ar-status="not-presenting">
-      </model-viewer></div>
-      <div class="column">
-        <model-viewer bounds="tight" enable-pan="" src="meshes/scene_3/mesh_net04.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" environment-image="neutral" shadow-intensity="1" camera-orbit="45deg 75deg auto" ar-status="not-presenting">
-      </model-viewer></div>
-    </div>
-    <div class="columns is-centered is-gapless interpolation-panel">
-      <img src="./resources/box3d_net0018.png" >
-      <div class="column">
-        <model-viewer bounds="tight" enable-pan="" src="meshes/scene_3/mesh_net00_pcd.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" environment-image="neutral" shadow-intensity="1" camera-orbit="45deg 75deg auto" ar-status="not-presenting">
-      </model-viewer></div>
-      <div class="column">
-        <model-viewer bounds="tight" enable-pan="" src="meshes/scene_3/mesh_net01_pcd.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" environment-image="neutral" shadow-intensity="1" camera-orbit="45deg 75deg auto" ar-status="not-presenting">
-      </model-viewer></div>
-      <div class="column">
-        <model-viewer bounds="tight" enable-pan="" src="meshes/scene_3/mesh_net02_pcd.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" environment-image="neutral" shadow-intensity="1" camera-orbit="45deg 75deg auto" ar-status="not-presenting">
-      </model-viewer></div>
-      <div class="column">
-        <model-viewer bounds="tight" enable-pan="" src="meshes/scene_3/mesh_net03_pcd.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" environment-image="neutral" shadow-intensity="1" camera-orbit="45deg 75deg auto" ar-status="not-presenting">
-      </model-viewer></div>
-      <div class="column">
-        <model-viewer bounds="tight" enable-pan="" src="meshes/scene_3/mesh_net04_pcd.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" environment-image="neutral" shadow-intensity="1" camera-orbit="45deg 75deg auto" ar-status="not-presenting">
-      </model-viewer></div>
-    </div>
-
-    <div class="columns is-centered is-gapless interpolation-panel">
-      <img src="./resources/0002_color.png" max-width="30%" height="auto" >
-      <div class="column">
-        <model-viewer bounds="tight" enable-pan="" src="meshes/scene_2/mesh_net00.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" environment-image="neutral" shadow-intensity="1" camera-orbit="45deg 75deg auto" ar-status="not-presenting">
-      </model-viewer></div>
-      <div class="column">
-        <model-viewer bounds="tight" enable-pan="" src="meshes/scene_2/mesh_net01.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" environment-image="neutral" shadow-intensity="1" camera-orbit="45deg 75deg auto" ar-status="not-presenting">
-      </model-viewer></div>
-      <div class="column">
-        <model-viewer bounds="tight" enable-pan="" src="meshes/scene_2/mesh_net02.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" environment-image="neutral" shadow-intensity="1" camera-orbit="45deg 75deg auto" ar-status="not-presenting">
-      </model-viewer></div>
-      <div class="column">
-        <model-viewer bounds="tight" enable-pan="" src="meshes/scene_2/mesh_net03.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" environment-image="neutral" shadow-intensity="1" camera-orbit="45deg 75deg auto" ar-status="not-presenting">
-      </model-viewer></div>
-      <div class="column">
-        <model-viewer bounds="tight" enable-pan="" src="meshes/scene_2/mesh_net04.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" environment-image="neutral" shadow-intensity="1" camera-orbit="45deg 75deg auto" ar-status="not-presenting">
-      </model-viewer></div>
-    </div>
-    <div class="columns is-centered is-gapless interpolation-panel">
-      <img src="./resources/box3d_net0002.png" max-width="30%" height="auto" >
-      <div class="column">
-        <model-viewer bounds="tight" enable-pan="" src="meshes/scene_2/mesh_net00_pcd.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" environment-image="neutral" shadow-intensity="1" camera-orbit="45deg 75deg auto" ar-status="not-presenting">
-      </model-viewer></div>
-      <div class="column">
-        <model-viewer bounds="tight" enable-pan="" src="meshes/scene_2/mesh_net01_pcd.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" environment-image="neutral" shadow-intensity="1" camera-orbit="45deg 75deg auto" ar-status="not-presenting">
-      </model-viewer></div>
-      <div class="column">
-        <model-viewer bounds="tight" enable-pan="" src="meshes/scene_2/mesh_net02_pcd.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" environment-image="neutral" shadow-intensity="1" camera-orbit="45deg 75deg auto" ar-status="not-presenting">
-      </model-viewer></div>
-      <div class="column">
-        <model-viewer bounds="tight" enable-pan="" src="meshes/scene_2/mesh_net03_pcd.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" environment-image="neutral" shadow-intensity="1" camera-orbit="45deg 75deg auto" ar-status="not-presenting">
-      </model-viewer></div>
-      <div class="column">
-        <model-viewer bounds="tight" enable-pan="" src="meshes/scene_2/mesh_net04_pcd.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" environment-image="neutral" shadow-intensity="1" camera-orbit="45deg 75deg auto" ar-status="not-presenting">
-      </model-viewer></div>
-    </div>
-    
-    <br>
-    <!-- Paper video. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
-        <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/LMg7NDcLDcA?autoplay=1&mute=1"
-          <!-- <iframe src="https://www.youtube.com/embed/Bg5vi6DSMdM?&autoplay=1rel=0&amp;showinfo=0" -->
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <div class="columns is-centered is-gapless interpolation-panel">
+          <img src="./resources/0018_color.png">
+          <div class="column">
+            <model-viewer bounds="tight" enable-pan="" src="meshes/scene_3/mesh_net00.glb" ar=""
+              ar-modes="webxr scene-viewer quick-look" camera-controls="" environment-image="neutral"
+              shadow-intensity="1" camera-orbit="45deg 75deg auto" ar-status="not-presenting">
+            </model-viewer>
+          </div>
+          <div class="column">
+            <model-viewer bounds="tight" enable-pan="" src="meshes/scene_3/mesh_net01.glb" ar=""
+              ar-modes="webxr scene-viewer quick-look" camera-controls="" environment-image="neutral"
+              shadow-intensity="1" camera-orbit="45deg 75deg auto" ar-status="not-presenting">
+            </model-viewer>
+          </div>
+          <div class="column">
+            <model-viewer bounds="tight" enable-pan="" src="meshes/scene_3/mesh_net02.glb" ar=""
+              ar-modes="webxr scene-viewer quick-look" camera-controls="" environment-image="neutral"
+              shadow-intensity="1" camera-orbit="45deg 75deg auto" ar-status="not-presenting">
+            </model-viewer>
+          </div>
+          <div class="column">
+            <model-viewer bounds="tight" enable-pan="" src="meshes/scene_3/mesh_net03.glb" ar=""
+              ar-modes="webxr scene-viewer quick-look" camera-controls="" environment-image="neutral"
+              shadow-intensity="1" camera-orbit="45deg 75deg auto" ar-status="not-presenting">
+            </model-viewer>
+          </div>
+          <div class="column">
+            <model-viewer bounds="tight" enable-pan="" src="meshes/scene_3/mesh_net04.glb" ar=""
+              ar-modes="webxr scene-viewer quick-look" camera-controls="" environment-image="neutral"
+              shadow-intensity="1" camera-orbit="45deg 75deg auto" ar-status="not-presenting">
+            </model-viewer>
+          </div>
         </div>
-      </div>
-    </div>
-    <!--/ Paper video. -->
-
-    <!-- Qualitative Latent space. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Shape and Texture Latent Space Traversal</h2>
-        <div class="content has-text-centered">
+        <div class="columns is-centered is-gapless interpolation-panel">
+          <img src="./resources/box3d_net0018.png">
+          <div class="column">
+            <model-viewer bounds="tight" enable-pan="" src="meshes/scene_3/mesh_net00_pcd.glb" ar=""
+              ar-modes="webxr scene-viewer quick-look" camera-controls="" environment-image="neutral"
+              shadow-intensity="1" camera-orbit="45deg 75deg auto" ar-status="not-presenting">
+            </model-viewer>
+          </div>
+          <div class="column">
+            <model-viewer bounds="tight" enable-pan="" src="meshes/scene_3/mesh_net01_pcd.glb" ar=""
+              ar-modes="webxr scene-viewer quick-look" camera-controls="" environment-image="neutral"
+              shadow-intensity="1" camera-orbit="45deg 75deg auto" ar-status="not-presenting">
+            </model-viewer>
+          </div>
+          <div class="column">
+            <model-viewer bounds="tight" enable-pan="" src="meshes/scene_3/mesh_net02_pcd.glb" ar=""
+              ar-modes="webxr scene-viewer quick-look" camera-controls="" environment-image="neutral"
+              shadow-intensity="1" camera-orbit="45deg 75deg auto" ar-status="not-presenting">
+            </model-viewer>
+          </div>
+          <div class="column">
+            <model-viewer bounds="tight" enable-pan="" src="meshes/scene_3/mesh_net03_pcd.glb" ar=""
+              ar-modes="webxr scene-viewer quick-look" camera-controls="" environment-image="neutral"
+              shadow-intensity="1" camera-orbit="45deg 75deg auto" ar-status="not-presenting">
+            </model-viewer>
+          </div>
+          <div class="column">
+            <model-viewer bounds="tight" enable-pan="" src="meshes/scene_3/mesh_net04_pcd.glb" ar=""
+              ar-modes="webxr scene-viewer quick-look" camera-controls="" environment-image="neutral"
+              shadow-intensity="1" camera-orbit="45deg 75deg auto" ar-status="not-presenting">
+            </model-viewer>
+          </div>
         </div>
-        <video id="qualtiave" autoplay muted loop height="100%">
-          <source src="resources/shapo_latent_space.mp4"
-                  type="video/mp4">
-        </video>
-      </div>
-    </div>
-    <!--/ Paper video. -->
 
-    <!-- Qualitative Joint Optimization. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Joint Shape, Appearance and 6D Pose Optimization</h2>
-        <div class="content has-text-centered">
-          <p>
-            We perform joint shape, appearance and 6D object pose optimization using our technique given a single-view of a novel object scene.
-          </p>
+        <div class="columns is-centered is-gapless interpolation-panel">
+          <img src="./resources/0002_color.png" max-width="30%" height="auto">
+          <div class="column">
+            <model-viewer bounds="tight" enable-pan="" src="meshes/scene_2/mesh_net00.glb" ar=""
+              ar-modes="webxr scene-viewer quick-look" camera-controls="" environment-image="neutral"
+              shadow-intensity="1" camera-orbit="45deg 75deg auto" ar-status="not-presenting">
+            </model-viewer>
+          </div>
+          <div class="column">
+            <model-viewer bounds="tight" enable-pan="" src="meshes/scene_2/mesh_net01.glb" ar=""
+              ar-modes="webxr scene-viewer quick-look" camera-controls="" environment-image="neutral"
+              shadow-intensity="1" camera-orbit="45deg 75deg auto" ar-status="not-presenting">
+            </model-viewer>
+          </div>
+          <div class="column">
+            <model-viewer bounds="tight" enable-pan="" src="meshes/scene_2/mesh_net02.glb" ar=""
+              ar-modes="webxr scene-viewer quick-look" camera-controls="" environment-image="neutral"
+              shadow-intensity="1" camera-orbit="45deg 75deg auto" ar-status="not-presenting">
+            </model-viewer>
+          </div>
+          <div class="column">
+            <model-viewer bounds="tight" enable-pan="" src="meshes/scene_2/mesh_net03.glb" ar=""
+              ar-modes="webxr scene-viewer quick-look" camera-controls="" environment-image="neutral"
+              shadow-intensity="1" camera-orbit="45deg 75deg auto" ar-status="not-presenting">
+            </model-viewer>
+          </div>
+          <div class="column">
+            <model-viewer bounds="tight" enable-pan="" src="meshes/scene_2/mesh_net04.glb" ar=""
+              ar-modes="webxr scene-viewer quick-look" camera-controls="" environment-image="neutral"
+              shadow-intensity="1" camera-orbit="45deg 75deg auto" ar-status="not-presenting">
+            </model-viewer>
+          </div>
         </div>
-        <video id="qualtiave" autoplay muted loop height="100%">
-          <source src="resources/combined_optim_1.mp4"
-                  type="video/mp4">
-        </video>
+        <div class="columns is-centered is-gapless interpolation-panel">
+          <img src="./resources/box3d_net0002.png" max-width="30%" height="auto">
+          <div class="column">
+            <model-viewer bounds="tight" enable-pan="" src="meshes/scene_2/mesh_net00_pcd.glb" ar=""
+              ar-modes="webxr scene-viewer quick-look" camera-controls="" environment-image="neutral"
+              shadow-intensity="1" camera-orbit="45deg 75deg auto" ar-status="not-presenting">
+            </model-viewer>
+          </div>
+          <div class="column">
+            <model-viewer bounds="tight" enable-pan="" src="meshes/scene_2/mesh_net01_pcd.glb" ar=""
+              ar-modes="webxr scene-viewer quick-look" camera-controls="" environment-image="neutral"
+              shadow-intensity="1" camera-orbit="45deg 75deg auto" ar-status="not-presenting">
+            </model-viewer>
+          </div>
+          <div class="column">
+            <model-viewer bounds="tight" enable-pan="" src="meshes/scene_2/mesh_net02_pcd.glb" ar=""
+              ar-modes="webxr scene-viewer quick-look" camera-controls="" environment-image="neutral"
+              shadow-intensity="1" camera-orbit="45deg 75deg auto" ar-status="not-presenting">
+            </model-viewer>
+          </div>
+          <div class="column">
+            <model-viewer bounds="tight" enable-pan="" src="meshes/scene_2/mesh_net03_pcd.glb" ar=""
+              ar-modes="webxr scene-viewer quick-look" camera-controls="" environment-image="neutral"
+              shadow-intensity="1" camera-orbit="45deg 75deg auto" ar-status="not-presenting">
+            </model-viewer>
+          </div>
+          <div class="column">
+            <model-viewer bounds="tight" enable-pan="" src="meshes/scene_2/mesh_net04_pcd.glb" ar=""
+              ar-modes="webxr scene-viewer quick-look" camera-controls="" environment-image="neutral"
+              shadow-intensity="1" camera-orbit="45deg 75deg auto" ar-status="not-presenting">
+            </model-viewer>
+          </div>
+        </div>
 
-        <!-- <br><br><br><br> -->
-<!-- 
+        <br>
+        <!-- Paper video. -->
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Video</h2>
+            <div class="publication-video">
+              <iframe src="https://www.youtube.com/embed/LMg7NDcLDcA?autoplay=1&mute=1" <!-- <iframe
+                src="https://www.youtube.com/embed/Bg5vi6DSMdM?&autoplay=1rel=0&amp;showinfo=0" -->
+                frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+        <!--/ Paper video. -->
+
+        <!-- Qualitative Latent space. -->
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-full-width">
+            <h2 class="title is-3">Shape and Texture Latent Space Traversal</h2>
+            <div class="content has-text-centered">
+            </div>
+            <video id="qualtiave" autoplay muted loop height="100%">
+              <source src="resources/shapo_latent_space.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+        <!--/ Paper video. -->
+
+        <!-- Qualitative Joint Optimization. -->
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-full-width">
+            <h2 class="title is-3">Joint Shape, Appearance and 6D Pose Optimization</h2>
+            <div class="content has-text-centered">
+              <p>
+                We perform joint shape, appearance and 6D object pose optimization using our technique given a
+                single-view of a novel object scene.
+              </p>
+            </div>
+            <video id="qualtiave" autoplay muted loop height="100%">
+              <source src="resources/combined_optim_1.mp4" type="video/mp4">
+            </video>
+
+            <!-- <br><br><br><br> -->
+            <!-- 
         <video id="qualtiave" autoplay muted loop height="100%">
           <source src="resources/combined_optim_2.mp4"
                   type="video/mp4">
         </video> -->
-      </div>
-    </div>
-    <!--/ Paper video. -->
-
-    <!-- Qualitative Shape+texture. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Shape and Texture Reconstruction</h2>
-        <div class="content has-text-centered">
-          <p>
-            Here we show more qualitative results of multi-object shape and appearance reconstruction on real-world novel object instances.
-          </p>
+          </div>
         </div>
-        <video id="qualtiave" autoplay muted loop height="100%">
-          <source src="resources/shapo_shape+texture.mp4"
-                  type="video/mp4">
-        </video>
-      </div>
-    </div>
+        <!--/ Paper video. -->
 
-    <!-- Qualitative Optimizaiton all. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Appearance Optimization</h2>
-        <div class="content has-text-centered">
-          <p>
-            We further compare inference vs latent optimization vs texture network finetuning for appearance optimization.
-          </p>
+        <!-- Qualitative Shape+texture. -->
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-full-width">
+            <h2 class="title is-3">Shape and Texture Reconstruction</h2>
+            <div class="content has-text-centered">
+              <p>
+                Here we show more qualitative results of multi-object shape and appearance reconstruction on real-world
+                novel object instances.
+              </p>
+            </div>
+            <video id="qualtiave" autoplay muted loop height="100%">
+              <source src="resources/shapo_shape+texture.mp4" type="video/mp4">
+            </video>
+          </div>
         </div>
-        <video id="qualtiave" autoplay muted loop height="100%">
-          <source src="resources/optim_all.mp4"
-                  type="video/mp4">
-        </video>
-      </div>
-    </div>
 
-    <!-- Qualitative Optimizaiton all. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">6D pose and size estimation comparison</h2>
-        <div class="content has-text-centered">
-          <p>
-            Our inference-time optimization allows us to perform accurate 6D pose and size estimation in comparison to strong baselines.
-          </p>
+        <!-- Qualitative Optimizaiton all. -->
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-full-width">
+            <h2 class="title is-3">Appearance Optimization</h2>
+            <div class="content has-text-centered">
+              <p>
+                We further compare inference vs latent optimization vs texture network finetuning for appearance
+                optimization.
+              </p>
+            </div>
+            <video id="qualtiave" autoplay muted loop height="100%">
+              <source src="resources/optim_all.mp4" type="video/mp4">
+            </video>
+          </div>
         </div>
-        <video id="qualtiave" autoplay muted loop height="100%">
-          <source src="resources/6Dpose_comparison.mp4"
-                  type="video/mp4">
-        </video>
-      </div>
-    </div>
 
-    <!-- Sergey optim all. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">3D only optimization</h2>
-        <div class="content has-text-centered">
-          <p>
-            Here we show shape and texture latent optimization for 3D models starting from a randomized model within a category and optimizing towards a target model.
-          </p>
+        <!-- Qualitative Optimizaiton all. -->
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-full-width">
+            <h2 class="title is-3">6D pose and size estimation comparison</h2>
+            <div class="content has-text-centered">
+              <p>
+                Our inference-time optimization allows us to perform accurate 6D pose and size estimation in comparison
+                to strong baselines.
+              </p>
+            </div>
+            <video id="qualtiave" autoplay muted loop height="100%">
+              <source src="resources/6Dpose_comparison.mp4" type="video/mp4">
+            </video>
+          </div>
         </div>
-        <video id="qualtiave" autoplay muted loop height="100%">
-          <source src="resources/sergey_optim.mp4"
-                  type="video/mp4">
-        </video>
-      </div>
-    </div>
 
-    <!-- Sergey optim all. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Zero-shot results on HSR Robot</h2>
-        <div class="content has-text-centered">
-          <p>
-            Our method generalizes nicely to real world unseen objects within the same category as shown
-            by qualitative results and on the images taken on HSR
-            robot showing zero-shot generalization i.e. no
-            re-training was done.
-          </p>
+        <!-- Sergey optim all. -->
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-full-width">
+            <h2 class="title is-3">3D only optimization</h2>
+            <div class="content has-text-centered">
+              <p>
+                Here we show shape and texture latent optimization for 3D models starting from a randomized model within
+                a category and optimizing towards a target model.
+              </p>
+            </div>
+            <video id="qualtiave" autoplay muted loop height="100%">
+              <source src="resources/sergey_optim.mp4" type="video/mp4">
+            </video>
+          </div>
         </div>
-        <video id="qualtiave" autoplay muted loop height="100%">
-          <source src="resources/qualitative_hsr.mp4"
-                  type="video/mp4">
-        </video>
-      </div>
-    </div>
+
+        <!-- Sergey optim all. -->
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-full-width">
+            <h2 class="title is-3">Zero-shot results on HSR Robot</h2>
+            <div class="content has-text-centered">
+              <p>
+                Our method generalizes nicely to real world unseen objects within the same category as shown
+                by qualitative results and on the images taken on HSR
+                robot showing zero-shot generalization i.e. no
+                re-training was done.
+              </p>
+            </div>
+            <video id="qualtiave" autoplay muted loop height="100%">
+              <source src="resources/qualitative_hsr.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
 
 
 
-<section class="section" id="BibTeX">
-  <div class="container is-max-desktop content">
-    <h2 class="title">BibTeX</h2>
-    <pre><code>@inproceedings{irshad2022shapo,
+        <section class="section" id="BibTeX">
+          <div class="container is-max-desktop content">
+            <h2 class="title">BibTeX</h2>
+            <p>
+              If you find our paper or pytorch code repository useful, please consider citing:
+            </p>
+            <pre><code>@inproceedings{irshad2022shapo,
   title={ShAPO: Implicit Representations for Multi Object Shape Appearance and Pose Optimization},
   author={Muhammad Zubair Irshad and Sergey Zakharov and Rares Ambrus and Thomas Kollar and Zsolt Kira and Adrien Gaidon},
   journal={European Conference on Computer Vision (ECCV)},
   year={2022},
   url={https://arxiv.org/abs/2207.13691},
 }</code></pre>
-  </div>
-</section>
+          </div>
+        </section>
 
 
-<footer class="footer">
-  <div class="container">
-    <div class="content has-text-centered">
-      <a class="icon-link"
-         href="https://arxiv.org/pdf/2207.13691.pdf">
-        <i class="fas fa-file-pdf"></i>
-      </a>
-      <a class="icon-link" href="https://github.com/zubair-irshad" class="external-link" disabled>
-        <i class="fab fa-github"></i>
-      </a>
-    </div>
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content has-text-centered">
-          <p>Page template borrowed from <a href="https://github.com/nerfies/nerfies.github.io"><span class="dnerf">Nerfies</span></a>.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</footer>
+        <footer class="footer">
+          <div class="container">
+            <div class="content has-text-centered">
+              <a class="icon-link" href="https://arxiv.org/pdf/2207.13691.pdf">
+                <i class="fas fa-file-pdf"></i>
+              </a>
+              <a class="icon-link" href="https://github.com/zubair-irshad" class="external-link" disabled>
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+            <div class="columns is-centered">
+              <div class="column is-8">
+                <div class="content has-text-centered">
+                  <p>Page template borrowed from <a href="https://github.com/nerfies/nerfies.github.io"><span
+                        class="dnerf">Nerfies</span></a>.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
 
 </body>
+
 </html>

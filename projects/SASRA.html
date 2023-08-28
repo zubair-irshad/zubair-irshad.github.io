@@ -1,32 +1,32 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="SASRA: Semantically-aware Spatio-temporal Reasoning Agent for Vision-and-Language Navigation in Continuous Environments.">
+    content="SASRA: Semantically-aware Spatio-temporal Reasoning Agent for Vision-and-Language Navigation in Continuous Environments.">
   <meta name="keywords" content="Vision and Language Navigation, Semantics learning">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>SASRA: Semantically-aware Spatio-temporal Reasoning Agent for Vision-and-Language Navigation in Continuous Environments.</title>
+  <title>SASRA: Semantically-aware Spatio-temporal Reasoning Agent for Vision-and-Language Navigation in Continuous
+    Environments.</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-6PM8R6TGEB"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
 
     gtag('config', 'G-6PM8R6TGEB');
   </script>
 
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-        rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
   <link rel="stylesheet" href="./static/css/bulma.min.css">
   <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
   <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -35,129 +35,128 @@
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
 </head>
+
 <body>
 
-<nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
-  <div class="navbar-menu">
-    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item" href="https://zubairirshad.com">
-      <span class="icon">
-          <i class="fas fa-home"></i>
-      </span>
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
       </a>
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          More Research
+    </div>
+    <div class="navbar-menu">
+      <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+        <a class="navbar-item" href="https://zubairirshad.com">
+          <span class="icon">
+            <i class="fas fa-home"></i>
+          </span>
         </a>
-        <div class="navbar-dropdown">
-          <a class="navbar-item" href="https://zubair-irshad.github.io/projects/robo-vln.html">
-            Robo-VLN
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            More Research
           </a>
-          <a class="navbar-item" href="https://zubair-irshad.github.io/projects/ShAPO.html">
-            ShAPO
-          </a>
-          <a class="navbar-item" href="https://zubair-irshad.github.io/projects/CenterSnap.html">
-            CenterSnap
-          </a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://zubair-irshad.github.io/projects/robo-vln.html">
+              Robo-VLN
+            </a>
+            <a class="navbar-item" href="https://zubair-irshad.github.io/projects/ShAPO.html">
+              ShAPO
+            </a>
+            <a class="navbar-item" href="https://zubair-irshad.github.io/projects/CenterSnap.html">
+              CenterSnap
+            </a>
+          </div>
         </div>
       </div>
+
     </div>
-
-  </div>
-</nav>
+  </nav>
 
 
-<section class="hero">
-  <div class="hero-body">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered">
-        <div class="column has-text-centered">
-          <h5 class="title is-3 publication-title">SASRA: Semantically-aware Spatio-temporal Reasoning Agent for Vision-and-Language Navigation in Continuous Environments</h5>
-          <div class="is-size-5 publication-authors">
-            <span class="author-block">
-              <a href="https://zubairirshad.com">Muhammad Zubair Irshad</a><sup>1</sup>,</span>
-            <span class="author-block">
-              <a href="https://niluthpol.github.io/">Niluthpol Chowdhury Mithun</a><sup>2</sup>,</span>
-            <span class="author-block">
-              Zachary Seymour<sup>2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://www.sri.com/bios/han-pang-chiu/">Han-Pang Chiu</a><sup>2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://www.sri.com/bios/supun-samarasekera/">Supun Samarasekera</a><sup>2</sup>
-            </span>
-            <span class="author-block">
-              <a href="https://www.sri.com/bios/rakesh-teddy-kumar/">Rakesh Kumar</a><sup>2</sup>
-            </span>
-          </div>
-
-          <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>Georgia Tech,</span>
-            <span class="author-block"><sup>2</sup>SRI International</span>
-          </div>
-
-          <div class="is-size-5 publication-authors">
-            <span class="author-block">
-              <a href="https://www.icpr2022.com/">International Conference on Pattern Recognition (ICPR), 2022</a>
-            </span>
-          </div>
-
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
           <div class="column has-text-centered">
-            <div class="publication-links">
-              <!-- PDF Link. -->
-              <span class="link-block">
-                <a href="https://arxiv.org/pdf/2108.11945.pdf"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fas fa-file-pdf"></i>
-                  </span>
-                  <span>Paper</span>
-                </a>
+            <h5 class="title is-3 publication-title">SASRA: Semantically-aware Spatio-temporal Reasoning Agent for
+              Vision-and-Language Navigation in Continuous Environments</h5>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="https://zubairirshad.com">Muhammad Zubair Irshad</a><sup>1</sup>,</span>
+              <span class="author-block">
+                <a href="https://niluthpol.github.io/">Niluthpol Chowdhury Mithun</a><sup>2</sup>,</span>
+              <span class="author-block">
+                Zachary Seymour<sup>2</sup>,
               </span>
-              <span class="link-block">
-                <a href="https://arxiv.org/abs/2108.11945"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
+              <span class="author-block">
+                <a href="https://www.sri.com/bios/han-pang-chiu/">Han-Pang Chiu</a><sup>2</sup>,
               </span>
-              <!-- Video Link. -->
-              <span class="link-block">
-                <a href="https://youtu.be/DsziGtgaJC0"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-youtube"></i>
-                  </span>
-                  <span>Video</span>
-                </a>
+              <span class="author-block">
+                <a href="https://www.sri.com/bios/supun-samarasekera/">Supun Samarasekera</a><sup>2</sup>
+              </span>
+              <span class="author-block">
+                <a href="https://www.sri.com/bios/rakesh-teddy-kumar/">Rakesh Kumar</a><sup>2</sup>
               </span>
             </div>
 
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>Georgia Tech,</span>
+              <span class="author-block"><sup>2</sup>SRI International</span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="https://www.icpr2022.com/">International Conference on Pattern Recognition (ICPR), 2022</a>
+              </span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- PDF Link. -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/pdf/2108.11945.pdf"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2108.11945" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+                <!-- Video Link. -->
+                <span class="link-block">
+                  <a href="https://youtu.be/DsziGtgaJC0" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                    </span>
+                    <span>Video</span>
+                  </a>
+                </span>
+              </div>
+
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="hero teaser">
+  <section class="hero teaser">
 
     <!-- Method video. -->
     <div class="container is-max-desktop">
       <div class="hero-body">
-        <img src="resources/sasra_web_1.gif" id="sasra_img"
-        class="interpolation-image"
-        alt="Interpolate start reference image."/>
+        <img src="resources/sasra_web_1.gif" id="sasra_img" class="interpolation-image"
+          alt="Interpolate start reference image." />
 
         <!-- <video id="method" autoplay muted loop height="100%">
           <source src="resources/sasra_web_1.mp4"
@@ -166,8 +165,8 @@
       </div>
     </div>
     <!--/ Method video. -->
-</section>
-<!-- <section class="hero is-light is-small">
+  </section>
+  <!-- <section class="hero is-light is-small">
   <div class="hero-body">
     <div class="container">
       <div id="results-carousel" class="carousel results-carousel">
@@ -223,143 +222,152 @@
     </div>
   </div>
 </section> -->
-<section class="section">
-  <div class="container is-max-desktop">
-    <!-- Abstract. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            This paper presents a novel approach for the Vision-and-Language Navigation (VLN) task in continuous 3D environments, which requires an autonomous agent to follow natural language instructions in unseen environments. Existing end-to-end learning-based VLN methods struggle at this task as they focus mostly on utilizing raw visual observations and lack the semantic spatio-temporal reasoning capabilities which is crucial in generalizing to new environments. In this regard, we present a hybrid transformer-recurrence model which focuses on combining classical semantic mapping techniques with a learning-based method. Our method creates a temporal semantic memory by building a top-down local ego-centric semantic map and performs cross-modal grounding to align map and language modalities to enable effective learning of VLN policy. Empirical results in a photo-realistic long-horizon simulation environment show that the proposed approach outperforms a variety of state-of-the-art methods and baselines with over 22% relative improvement in SPL in prior unseen environments.
-          </p>
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              This paper presents a novel approach for the Vision-and-Language Navigation (VLN) task in continuous 3D
+              environments, which requires an autonomous agent to follow natural language instructions in unseen
+              environments. Existing end-to-end learning-based VLN methods struggle at this task as they focus mostly on
+              utilizing raw visual observations and lack the semantic spatio-temporal reasoning capabilities which is
+              crucial in generalizing to new environments. In this regard, we present a hybrid transformer-recurrence
+              model which focuses on combining classical semantic mapping techniques with a learning-based method. Our
+              method creates a temporal semantic memory by building a top-down local ego-centric semantic map and
+              performs cross-modal grounding to align map and language modalities to enable effective learning of VLN
+              policy. Empirical results in a photo-realistic long-horizon simulation environment show that the proposed
+              approach outperforms a variety of state-of-the-art methods and baselines with over 22% relative
+              improvement in SPL in prior unseen environments.
+            </p>
+          </div>
         </div>
       </div>
-    </div>
-    <!--/ Abstract. -->
+      <!--/ Abstract. -->
 
-    <!-- Method video. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Method</h2>
-        <div class="content has-text-centered">
-          <p>
-            <span class="dnerf">SASRA</span> is a multi-modal method to combine classical semantic mapping techniques with a learning-based approach for the task of Vision-and-Language Navigation in Continuous Environments.
-          </p>
+      <!-- Method video. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3">Method</h2>
+          <div class="content has-text-centered">
+            <p>
+              <span class="dnerf">SASRA</span> is a multi-modal method to combine classical semantic mapping techniques
+              with a learning-based approach for the task of Vision-and-Language Navigation in Continuous Environments.
+            </p>
+          </div>
+          <img src="resources/method_sasra.SVG" id="sasra_img" class="interpolation-image"
+            alt="Interpolate start reference image." />
         </div>
-        <img src="resources/method_sasra.SVG" id="sasra_img"
-        class="interpolation-image"
-        alt="Interpolate start reference image."/>
       </div>
-    </div>
-    <!--/ Method video. -->
+      <!--/ Method video. -->
 
-    <!-- Paper video. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
-        <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/DsziGtgaJC0?autoplay=1&mute=1"
-          <!-- <iframe src="https://www.youtube.com/embed/Bg5vi6DSMdM?&autoplay=1rel=0&amp;showinfo=0" -->
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <!-- Paper video. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Video</h2>
+          <div class="publication-video">
+            <iframe src="https://www.youtube.com/embed/DsziGtgaJC0?autoplay=1&mute=1" <!-- <iframe
+              src="https://www.youtube.com/embed/Bg5vi6DSMdM?&autoplay=1rel=0&amp;showinfo=0" -->
+              frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
         </div>
       </div>
-    </div>
-    <!--/ Paper video. -->
+      <!--/ Paper video. -->
 
-    <!-- Qualitative Results video. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Qualitative Results</h2>
-        <div class="content has-text-centered">
-          <p>
-            <span class="dnerf">SASRA</span> agent
-            builds a top-down spatial memory in the form of semantic
-            map and aligns the language and map features to complete
-            the long-horizon navigation task in 37 and 62 steps
-          </p>
-        </div>
-        <video id="qualtiave" autoplay muted loop width="100%">
-          <source src="resources/sasra_qualitative1.mp4"
-                  type="video/mp4">
-        </video>
-      </div>
-    </div>
-    <!--/ Paper video. -->
-
-    <!-- Qualitative Results video. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Instruction-guided Navigation in Unseen Environments</h2>
-        <div class="content has-text-centered">
-          <p>
-            <span class="dnerf">SASRA</span> performs effective instruction-guided navigation in unseen real-world environments.
-          </p>
-        </div>
-      </div>
-    </div>
-    <!--/ Paper video. -->
-    <div class="columns is-centered">
-      <!-- Depth_based reconstruion 1. -->
-      <div class="column">
-        <div class="content">
-          <video id="dollyzoom" autoplay muted loop height="100%">
-            <source src="resources/sasra_nav1.mp4"
-                    type="video/mp4">
+      <!-- Qualitative Results video. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3">Qualitative Results</h2>
+          <div class="content has-text-centered">
+            <p>
+              <span class="dnerf">SASRA</span> agent
+              builds a top-down spatial memory in the form of semantic
+              map and aligns the language and map features to complete
+              the long-horizon navigation task in 37 and 62 steps
+            </p>
+          </div>
+          <video id="qualtiave" autoplay muted loop width="100%">
+            <source src="resources/sasra_qualitative1.mp4" type="video/mp4">
           </video>
         </div>
       </div>
-      <!--/ Depth_based reconstruion 1. -->
+      <!--/ Paper video. -->
 
-      <!-- Depth_based reconstruction 2. -->
-      <div class="column">
-            <video id="matting-video" autoplay muted loop height="100%">
-              <source src="resources/sasra_nav2.mp4"
-                      type="video/mp4">
-            </video>
+      <!-- Qualitative Results video. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3">Instruction-guided Navigation in Unseen Environments</h2>
+          <div class="content has-text-centered">
+            <p>
+              <span class="dnerf">SASRA</span> performs effective instruction-guided navigation in unseen real-world
+              environments.
+            </p>
           </div>
-
         </div>
       </div>
+      <!--/ Paper video. -->
+      <div class="columns is-centered">
+        <!-- Depth_based reconstruion 1. -->
+        <div class="column">
+          <div class="content">
+            <video id="dollyzoom" autoplay muted loop height="100%">
+              <source src="resources/sasra_nav1.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+        <!--/ Depth_based reconstruion 1. -->
+
+        <!-- Depth_based reconstruction 2. -->
+        <div class="column">
+          <video id="matting-video" autoplay muted loop height="100%">
+            <source src="resources/sasra_nav2.mp4" type="video/mp4">
+          </video>
+        </div>
+
+      </div>
+    </div>
     </div>
     <!--/ Depth_based reconstruction 2. -->
-  </div>
-</section>
+    </div>
+  </section>
 
-<section class="section" id="BibTeX">
-  <div class="container is-max-desktop content">
-    <h2 class="title">BibTeX</h2>
-    <pre><code>@inproceedings{irshad2022sasra,
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@inproceedings{irshad2022sasra,
   title={SASRA: Semantically-aware Spatio-temporal Reasoning Agent for Vision-and-Language Navigation in Continuous Environments},
   author={Muhammad Zubair Irshad and Niluthpol Chowdhury Mithun and Zachary Seymour and Han-Pang Chiu and Supun Samarasekera and Rakesh Kumar},
   journal={International Conference on Pattern Recognition (ICPR)},
   year={2022},
   url={https://arxiv.org/abs/2108.11945},
 }</code></pre>
-  </div>
-</section>
-
-
-<footer class="footer">
-  <div class="container">
-    <div class="content has-text-centered">
-      <a class="icon-link"
-         href="https://arxiv.org/pdf/2108.11945.pdf">
-        <i class="fas fa-file-pdf"></i>
-      </a>
-      <a class="icon-link" href="https://github.com/zubair-irshad" class="external-link" disabled>
-        <i class="fab fa-github"></i>
-      </a>
     </div>
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content has-text-centered">
-          <p>Page template borrowed from <a href="https://zubair-irshad.github.io/projects/CenterSnap.html"><span class="dnerf">CenterSnap</span></a>.</p>
+  </section>
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="content has-text-centered">
+        <a class="icon-link" href="https://arxiv.org/pdf/2108.11945.pdf">
+          <i class="fas fa-file-pdf"></i>
+        </a>
+        <a class="icon-link" href="https://github.com/zubair-irshad" class="external-link" disabled>
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content has-text-centered">
+            <p>Page template borrowed from <a href="https://zubair-irshad.github.io/projects/CenterSnap.html"><span
+                  class="dnerf">CenterSnap</span></a>.</p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</footer>
+  </footer>
 
 </body>
+
 </html>
