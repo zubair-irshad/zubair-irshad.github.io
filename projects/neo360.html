@@ -610,7 +610,53 @@
           </div>
         </div>
       </div>
+
     </section>
+    
+    <section class="section">
+      <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3">Overfitting Experiments</h2>
+          <div class="content has-text-centered">
+            <p>
+              While over proposed technique is a generalizable method which works in a few-shot setting, for the ease of reproducibility and to push the state-of-the-art on single scene novel-view-synthesis of unbounded scenes, 
+              we provide scripts to overfit to single scenes given many images. For more details, please see our released <a href="https://github.com/zubair-irshad/NeO-360">pytorch code</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      
+      <!-- NERDS360 dataset Dataset top. -->
+      <div class="columns is-centered">
+        <!-- Visual Effects. -->
+        <div class="column">
+          <div class="content">
+            <img src="resources/nerds360_gaussian_splatting.gif" alt="Image description" style="width: 100%; height: auto;">
+            <p>
+              <i>Gaussian Splatting:</i> overfitting experiments on NERDS360 single scene using <a href="https://docs.nerf.studio">nerfstudio</a>.
+            </p>
+          </div>
+        </div>
+        <!--/ Visual Effects. -->
+
+        <!-- Matting. -->
+        <div class="column">
+          <div class="columns is-centered">
+            <div class="column content">
+              <img src="resources/vanilla_nerf_nerds360.gif" alt="Image description"
+                style="width: 100%; height: auto;">
+              <p>
+                <i>Vanilla NeRF:</i> overfitting experiments on NERDS360 single scene.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+    
     <section class="section" id="BibTeX">
       <div class="container is-max-desktop content">
         <h2 class="title">BibTeX</h2>
