@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Publications by Zubair Irshad - Research Scientist at Toyota Research Institute | Georgia Tech PhD | Fulbright Scholar.">
+    <title>Publications - Zubair Irshad</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="images/profile.jpg" type="image/png">
+    <style>
+        /* Year Section Styles */
+        .year-section {
+            margin-bottom: 40px;
+        }
+
+        .year-header {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 25px;
+        }
+
+        .year-header .year-line {
+            flex: 1;
+            height: 1px;
+            background: #e0e0e0;
+        }
+
+        .year-header .year-number {
+            font-family: var(--font-family-headings);
+            font-size: 42px;
+            font-weight: 300;
+            color: #999999;
+            letter-spacing: 2px;
+        }
+
+        /* Remove bottom border from last publication in each year section */
+        .year-section .publication-card:last-child {
+            border-bottom: none;
+        }
+
+        .publications-page-header {
+            padding: 100px 0 40px;
+            text-align: center;
+        }
+
+        .publications-page-header h1 {
+            font-family: var(--font-family-headings);
+            font-size: 36px;
+            font-weight: 600;
+            color: var(--heading-color);
+            margin-bottom: 10px;
+        }
+
+        .publications-page-header p {
+            font-size: 16px;
+            color: #666;
+        }
+
+        .publications-page-content {
+            padding: 20px 0 60px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Blue Vignette Effect -->
+    <div class="vignette"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-brand">
+            <a href="index.html"><span>Zubair</span> Irshad</a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="publications.html" class="active">Publications</a></li>
+            <li><a href="https://zubairirshad.com/irshad_zubair_resume/" target="_blank">Resume</a></li>
+        </ul>
+    </nav>
+
+    <!-- Publications Header -->
+    <section class="publications-page-header">
+        <div class="container">
+            <h1>Publications</h1>
+            <p>For a complete list, please see my <a href="https://scholar.google.com/citations?user=K2XA5XEAAAAJ&hl=en"
+                    style="color: var(--accent-color);">Google Scholar Profile</a></p>
+        </div>
+    </section>
+
+    <!-- Publications Content -->
+    <section class="publications-page-content">
+        <div class="container">
+            <div class="publications-list">
+
+                <!-- 2026 -->
+                <div class="year-section">
+                    <div class="year-header">
+                        <div class="year-line"></div>
+                        <span class="year-number">2026</span>
+                    </div>
+
+                    <!-- FastMap - 3DV 2026 -->
+                    <div class="publication-card">
+                        <div class="publication-image">
+                            <video autoplay loop muted playsinline>
+                                <source src="videos/fastmap_teaser.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="publication-content">
+                            <h3>FastMap: Revisiting Dense and Scalable Structure from Motion</h3>
+                            <p class="authors">Jiahao Li, Haochen Wang, <span class="highlight">Muhammad Zubair
+                                    Irshad</span>, Igor Vasiljevic, Matthew R. Walter, Vitor Campagnolo Guizilini, Greg
+                                Shakhnarovich</p>
+                            <p class="venue">International Conference on 3D Vision, 3DV 2026 (<strong>Oral
+                                    Presentation</strong>)</p>
+                            <div class="publication-links">
+                                <a href="https://arxiv.org/pdf/2505.04612" class="btn">Paper</a>
+                                <a href="https://jiahao.ai/fastmap/" class="btn">Project Page</a>
+                                <a href="https://github.com/pals-ttic/fastmap" class="btn">Code</a>
+                                <span class="btn btn-bibtex" onclick="toggleBibtex(this)">BibTeX</span>
+                            </div>
+                            <div class="bibtex-container">
+                                <div class="bibtex-box">
+                                    <button class="bibtex-copy-btn" onclick="copyBibtex(this)">Copy</button>
+                                    <pre>@inproceedings{li2026fastmap,
+  title={FastMap: Revisiting Dense and Scalable Structure from Motion},
+  author={Li, Jiahao and Wang, Haochen and Irshad, Muhammad Zubair and Vasiljevic, Igor and Walter, Matthew R. and Guizilini, Vitor Campagnolo and Shakhnarovich, Greg},
+  booktitle={International Conference on 3D Vision (3DV)},
+  year={2026}
+}</pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PolaRiS -->
+                    <div class="publication-card">
+                        <div class="publication-image">
+                            <video autoplay loop muted playsinline>
+                                <source src="videos/polaris_teaser.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="publication-content">
+                            <h3>PolaRiS: Scalable Real-to-Sim Evaluations for Generalist Robot Policies</h3>
+                            <p class="authors">Arhan Jain, Mingtong Zhang, Kanav Arora, William Chen, Marcel Torne,
+                                <span class="highlight">Muhammad Zubair Irshad</span>, Sergey Zakharov, Yue Wang, Sergey
+                                Levine, Chelsea Finn, Wei-Chiu Ma, Dhruv Shah, Abhishek Gupta, Karl Pertsch
+                            </p>
+                            <p class="venue">arXiv 2026</p>
+                            <div class="publication-links">
+                                <a href="https://arxiv.org/pdf/2512.16881" class="btn">Paper</a>
+                                <a href="https://polaris-evals.github.io/" class="btn">Project Page</a>
+                                <a href="https://github.com/arhanjain/PolaRiS/tree/main" class="btn">Code</a>
+                                <a href="https://huggingface.co/datasets/owhan/PolaRiS-Hub" class="btn">Dataset (HF)</a>
+                                <span class="btn btn-bibtex" onclick="toggleBibtex(this)">BibTeX</span>
+                            </div>
+                            <div class="bibtex-container">
+                                <div class="bibtex-box">
+                                    <button class="bibtex-copy-btn" onclick="copyBibtex(this)">Copy</button>
+                                    <pre>@misc{polaris,
+        title   = {PolaRiS: Scalable Real-to-Sim Evaluations for Generalist Robot Policies},
+        author  = {Jain, Arhan and Zhang, Mingtong and Arora, Kanav and Chen, William and Torne, Marcel and Irshad, Muhammad Zubair and Zakharov, Sergey and Wang, Yue and Levine, Sergey and Finn, Chelsea and Ma, Wei-Chiu and Shah, Dhruv and Gupta, Abhishek and Pertsch, Karl},
+        year    = {2025}
+}</pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2025 -->
+                <div class="year-section">
+                    <div class="year-header">
+                        <div class="year-line"></div>
+                        <span class="year-number">2025</span>
+                    </div>
+
+                    <!-- LBM -->
+                    <div class="publication-card">
+                        <div class="publication-image">
+                            <video autoplay loop muted playsinline>
+                                <source src="videos/lbm_teaser.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="publication-content">
+                            <h3>A Careful Examination of Large Behavior Models for Multitask Dexterous Manipulation</h3>
+                            <p class="authors">Jose Barreiros*, Andrew Beaulieu*, Aditya Bhat*, Rick Cory*, … <span
+                                    class="highlight">Muhammad Zubair Irshad</span>*, … Rares Ambrus, Kerri
+                                Fetzer-Borelli,
+                                Ben Burchfiel, Hadas Kress-Gazit, Siyuan Feng, Stacie Ford, Russ Tedrake.</p>
+                            <p class="venue"><strong>*Primary contributors (listed first, alphabetical)*</strong> |
+                                arXiv 2025</p>
+                            <div class="publication-links">
+                                <a href="https://arxiv.org/pdf/2507.05331" class="btn">Paper</a>
+                                <a href="https://toyotaresearchinstitute.github.io/lbm1/" class="btn">Project Page</a>
+                                <a href="https://www.youtube.com/watch?v=DeLpnTgzJT4" class="btn">Video</a>
+                                <a href="https://bostondynamics.com/blog/large-behavior-models-atlas-find-new-footing/"
+                                    class="btn">Blog (with BD)</a>
+                                <span class="btn btn-bibtex" onclick="toggleBibtex(this)">BibTeX</span>
+                            </div>
+                            <div class="bibtex-container">
+                                <div class="bibtex-box">
+                                    <button class="bibtex-copy-btn" onclick="copyBibtex(this)">Copy</button>
+                                    <pre>@article{lbmtri2025,
+  title={A Careful Examination of Large Behavior Models for Multitask Dexterous Manipulation}, 
+  author={TRI LBM Team and Jose Barreiros and Andrew Beaulieu and ...},
+  year={2025},
+  eprint={2507.05331},
+  archivePrefix={arXiv},
+}</pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- MVGD - CVPR 2025 -->
+                    <div class="publication-card">
+                        <div class="publication-image">
+                            <video autoplay loop muted playsinline>
+                                <source src="videos/mvgd_teaser_web.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="publication-content">
+                            <h3>Zero-Shot Novel View and Depth Synthesis with Multi-View Geometric Diffusion</h3>
+                            <p class="authors">Vitor Guizilini, <span class="highlight">Muhammad Zubair Irshad</span>,
+                                Dian
+                                Chen, Greg Shakhnarovich, Rares Ambrus</p>
+                            <p class="venue">Computer Vision and Pattern Recognition, CVPR 2025</p>
+                            <div class="publication-links">
+                                <a href="https://arxiv.org/pdf/2501.18804" class="btn">Paper</a>
+                                <a href="https://mvgd.github.io/" class="btn">Project Page</a>
+                                <span class="btn btn-bibtex" onclick="toggleBibtex(this)">BibTeX</span>
+                            </div>
+                            <div class="bibtex-container">
+                                <div class="bibtex-box">
+                                    <button class="bibtex-copy-btn" onclick="copyBibtex(this)">Copy</button>
+                                    <pre>@misc{guizilini2025zeroshotnovelviewdepth,
+        title={Zero-Shot Novel View and Depth Synthesis with Multi-View Geometric Diffusion}, 
+        author={Vitor Guizilini and Muhammad Zubair Irshad and Dian Chen and Greg Shakhnarovich and Rares Ambrus},
+        year={2025},
+        eprint={2501.18804},
+        archivePrefix={arXiv},
+        primaryClass={cs.CV}
+}</pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ZeroGrasp - CVPR 2025 -->
+                    <div class="publication-card">
+                        <div class="publication-image">
+                            <video autoplay loop muted playsinline>
+                                <source src="videos/zero_grasp_teaser_final.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="publication-content">
+                            <h3>ZeroGrasp: Zero-Shot Shape Reconstruction Enabled Robotic Grasping</h3>
+                            <p class="authors">Shun Iwase, <span class="highlight">Muhammad Zubair Irshad</span>,
+                                Katherine
+                                Liu, Vitor Guizilini, Robert Lee, Takuya Ikeda, Amma Ayako, Koichi Nishiwaki, Kris
+                                Kitani,
+                                Rares Ambrus, Sergey Zakharov</p>
+                            <p class="venue">Computer Vision and Pattern Recognition, CVPR 2025</p>
+                            <div class="publication-links">
+                                <a href="https://arxiv.org/pdf/2504.10857" class="btn">Paper</a>
+                                <a href="https://sh8.io/#/zerograsp" class="btn">Project Page</a>
+                                <span class="btn btn-bibtex" onclick="toggleBibtex(this)">BibTeX</span>
+                            </div>
+                            <div class="bibtex-container">
+                                <div class="bibtex-box">
+                                    <button class="bibtex-copy-btn" onclick="copyBibtex(this)">Copy</button>
+                                    <pre>@InProceedings{Iwase_CVPR_2025,
+  author = {Iwase, Shun and, Irshad, Muhammad Zubair and Liu, Katherine and Guizilini, Vitor and Lee, Robert and Ikeda, Takuya and Amma, Ayako and Nishiwaki, Koichi and Kitani, Kris and Ambrus, Rares and Zakharov, Sergey},
+  title = {ZeroGrasp: Zero-Shot Shape Reconstruction Enabled Robotic Grasping},
+  booktitle = {CVPR},
+  year = {2025}
+}</pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- EmbodiedSplat - ICCV 2025 -->
+                    <div class="publication-card">
+                        <div class="publication-image">
+                            <img src="images/publications/EmbodiedSplat_Architecture.png" alt="Embodied Splat">
+                        </div>
+                        <div class="publication-content">
+                            <h3>EmbodiedSplat: Personalized Real-to-Sim-to-Real Navigation with Gaussian Splats from a
+                                Mobile Device</h3>
+                            <p class="authors">Gunjan Chhablani, Xiaomeng Ye, Rynaa Grover, <span
+                                    class="highlight">Muhammad
+                                    Zubair Irshad</span>, Zsolt Kira</p>
+                            <p class="venue">International Conference on Computer Vision, ICCV 2025 | Embodied AI
+                                Workshop,
+                                CVPR 2025</p>
+                            <div class="publication-links">
+                                <a href="https://arxiv.org/pdf/2509.17430" class="btn">Paper</a>
+                                <a href="https://gchhablani.github.io/embodied-splat/" class="btn">Project Page</a>
+                                <a href="https://github.com/gchhablani/embodied-splat-v1" class="btn">Code</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SplArt - ICCV 2025 -->
+                    <div class="publication-card">
+                        <div class="publication-image">
+                            <video autoplay loop muted playsinline>
+                                <source src="videos/splart_teaser_final.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="publication-content">
+                            <h3>SplArt: Articulation Estimation and Part-Level Reconstruction with 3D Gaussian Splatting
+                            </h3>
+                            <p class="authors">Shengjie Lin, Jiading Fang, <span class="highlight">Muhammad Zubair
+                                    Irshad</span>, Vitor Campagnolo Guizilini, Rares Andrei Ambrus, Greg Shakhnarovich,
+                                Matthew R. Walter</p>
+                            <p class="venue">International Conference on Computer Vision, ICCV 2025</p>
+                            <div class="publication-links">
+                                <a href="https://arxiv.org/pdf/2506.03594" class="btn">Paper</a>
+                                <a href="https://github.com/ripl/splart" class="btn">Code</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Real2Render2Real - CoRL 2025 -->
+                    <div class="publication-card">
+                        <div class="publication-image">
+                            <video autoplay loop muted playsinline>
+                                <source src="videos/real2render2real_teaser.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="publication-content">
+                            <h3>Real2Render2Real: Scaling Robotic Manipulation Data Without Dynamics Simulation or Robot
+                                Hardware</h3>
+                            <p class="authors">Justin Yu, Letian Fu, Huang Huang, Karim El-Refai, Rares Andrei Ambrus,
+                                Richard Cheng, <span class="highlight">Muhammad Zubair Irshad</span>, Ken Goldberg</p>
+                            <p class="venue">Conference on Robot Learning, CORL 2025 (<strong>Oral
+                                    Presentation</strong>)</p>
+                            <div class="publication-links">
+                                <a href="https://arxiv.org/pdf/2505.09601" class="btn">Paper</a>
+                                <a href="https://real2render2real.com/" class="btn">Project Page</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- POGS - ICRA 2025 -->
+                    <div class="publication-card">
+                        <div class="publication-image">
+                            <video autoplay loop muted playsinline>
+                                <source src="videos/pogs_teaser_final.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="publication-content">
+                            <h3>POGS: Persistent Object Gaussian Splat for Tracking Human and Robot Manipulation of
+                                Irregularly Shaped Objects</h3>
+                            <p class="authors">Justin Yu, Kush Hari, Karim El-Refai, Arnav Dalil, Justin Kerr, Chung-Min
+                                Kim, Richard Cheng, <span class="highlight">Muhammad Zubair Irshad</span>, Ken Goldberg
+                            </p>
+                            <p class="venue">International Conference on Robotics and Automation, ICRA 2025</p>
+                            <div class="publication-links">
+                                <a href="https://arxiv.org/pdf/2503.05189" class="btn">Paper</a>
+                                <a href="https://berkeleyautomation.github.io/POGS/" class="btn">Project Page</a>
+                                <a href="https://github.com/uynitsuj/pogs" class="btn">Code</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Neural Fields Survey -->
+                    <div class="publication-card">
+                        <div class="publication-image">
+                            <img src="images/publications/robonerf_timeline_v2-768x246.png" alt="Neural Fields Survey">
+                        </div>
+                        <div class="publication-content">
+                            <h3>Neural Fields in Robotics: A Survey</h3>
+                            <p class="authors"><span class="highlight">Muhammad Zubair Irshad</span>, Mauro Comi,
+                                Yen-Chen
+                                Lin, Nick Heppert, Abhinav Valada, Zsolt Kira, Rares Ambrus, Johnathan Trembley</p>
+                            <p class="venue">In Submission, 2025</p>
+                            <div class="publication-links">
+                                <a href="https://arxiv.org/pdf/2410.20220" class="btn">Paper</a>
+                                <a href="https://robonerf.github.io/" class="btn">Project Page</a>
+                                <a href="https://github.com/zubair-irshad/Awesome-Implicit-NeRF-Robotics"
+                                    class="btn">Github List</a>
+                                <span class="btn btn-bibtex" onclick="toggleBibtex(this)">BibTeX</span>
+                            </div>
+                            <div class="bibtex-container">
+                                <div class="bibtex-box">
+                                    <button class="bibtex-copy-btn" onclick="copyBibtex(this)">Copy</button>
+                                    <pre>@article{irshad2024neuralfieldsroboticssurvey,
+  title={Neural Fields in Robotics: A Survey},
+  author={Muhammad Zubair Irshad and Mauro Comi and Yen-Chen Lin and Nick Heppert and Abhinav Valada and Rares Ambrus and Zsolt Kira and Jonathan Tremblay},
+  journal={arXiv preprint arXiv:2410.20220},
+  year={2024}
+}</pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2024 -->
+                <div class="year-section">
+                    <div class="year-header">
+                        <div class="year-line"></div>
+                        <span class="year-number">2024</span>
+                    </div>
+
+                    <!-- NeRF-MAE - ECCV 2024 -->
+                    <div class="publication-card">
+                        <div class="publication-image">
+                            <img src="videos/animation_nerf_mae_white-ezgif.com-resize.gif" alt="NeRF-MAE">
+                        </div>
+                        <div class="publication-content">
+                            <h3>NeRF-MAE: Masked AutoEncoders for Self-Supervised 3D Representation Learning for Neural
+                                Radiance Fields</h3>
+                            <p class="authors"><span class="highlight">Muhammad Zubair Irshad</span>, Sergey Zakharov,
+                                Vitor
+                                Guizilini, Adrien Gaidon, Zsolt Kira, Rares Ambrus</p>
+                            <p class="venue">European Conference on Computer Vision, ECCV 2024</p>
+                            <div class="publication-links">
+                                <a href="https://arxiv.org/pdf/2404.01300.pdf" class="btn">Paper</a>
+                                <a href="https://nerf-mae.github.io/" class="btn">Project Page</a>
+                                <a href="https://github.com/zubair-irshad/NeRF-MAE" class="btn">Code</a>
+                                <a href="https://youtu.be/D60hlhmeuJI" class="btn">Video</a>
+                                <span class="btn btn-bibtex" onclick="toggleBibtex(this)">BibTeX</span>
+                            </div>
+                            <div class="bibtex-container">
+                                <div class="bibtex-box">
+                                    <button class="bibtex-copy-btn" onclick="copyBibtex(this)">Copy</button>
+                                    <pre>@inproceedings{irshad2024nerfmae,
+    title={NeRF-MAE: Masked AutoEncoders for Self-Supervised 3D Representation Learning for Neural Radiance Fields},
+    author={Muhammad Zubair Irshad and Sergey Zakharov and Vitor Guizilini and Adrien Gaidon and Zsolt Kira and Rares Ambrus},
+    journal={European Conference on Computer Vision (ECCV)},
+    year={2024}
+}</pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- DROID/Posed-DROID - RSS 2024 -->
+                    <div class="publication-card">
+                        <div class="publication-image">
+                            <video autoplay loop muted playsinline>
+                                <source src="videos/droid_teaser_final.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="publication-content">
+                            <h3>Posed-DROID: Scaling-Up Automatic Camera Calibration for DROID dataset</h3>
+                            <p class="authors"><span class="highlight">Muhammad Zubair Irshad</span>, Vitor Guizilini,
+                                Alexander Khazatsky, Karl Pertsch</p>
+                            <p class="venue">Part of DROID paper, published at Robotics: Science and System, RSS 2024
+                            </p>
+                            <div class="publication-links">
+                                <a href="https://arxiv.org/pdf/2403.12945" class="btn">Paper</a>
+                                <a href="http://medium.com/p/4ddfc45361d3" class="btn">Blog</a>
+                                <a href="https://droid-dataset.github.io/" class="btn">Project Page</a>
+                                <span class="btn btn-bibtex" onclick="toggleBibtex(this)">BibTeX</span>
+                            </div>
+                            <div class="bibtex-container">
+                                <div class="bibtex-box">
+                                    <button class="bibtex-copy-btn" onclick="copyBibtex(this)">Copy</button>
+                                    <pre>@article{khazatsky2024droid,
+    title   = {DROID: A Large-Scale In-The-Wild Robot Manipulation Dataset},
+    author  = {Alexander Khazatsky and Karl Pertsch and ... and Muhammad Zubair Irshad and ... and Chelsea Finn},
+    year    = {2024},
+}</pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- RoVi-Aug - CoRL 2024 -->
+                    <div class="publication-card">
+                        <div class="publication-image">
+                            <video autoplay loop muted playsinline>
+                                <source src="videos/rovi_aug_teaser_final.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="publication-content">
+                            <h3>RoVi-Aug: Robot and Viewpoint Augmentation for Cross-Embodiment Robot Learning</h3>
+                            <p class="authors">Lawrence Chen*, Chenfeng Xu*, Karthik Dharmarajan, <span
+                                    class="highlight">Muhammad Zubair Irshad</span>, Richard Cheng, Kurt Keutzer,
+                                Masayoshi
+                                Tomizuka, Quan Vuong, Ken Goldberg</p>
+                            <p class="venue">Conference on Robot Learning, CoRL 2024 (<strong>Oral
+                                    Presentation</strong>, Top 4.3%)</p>
+                            <div class="publication-links">
+                                <a href="https://www.arxiv.org/pdf/2409.03403" class="btn">Paper</a>
+                                <a href="https://rovi-aug.github.io/" class="btn">Project Page</a>
+                                <a href="https://github.com/BerkeleyAutomation/rovi-aug" class="btn">Code</a>
+                                <a href="https://techxplore.com/news/2024-10-augmentation-algorithm-skills-robots.html"
+                                    class="btn">Press</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- LEGS - IROS 2024 -->
+                    <div class="publication-card">
+                        <div class="publication-image">
+                            <video autoplay loop muted playsinline>
+                                <source src="videos/LEGS_demo.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="publication-content">
+                            <h3>Language-Embedded Gaussian Splats (LEGS): Incrementally Building Room-Scale
+                                Representations
+                                with a Mobile Robot</h3>
+                            <p class="authors">Justin Yu*, Kush Hari*, Kishore Srinivas*, Adam Rashid, Chung Min Kim,
+                                Justin
+                                Kerr, Richard Cheng, <span class="highlight">Muhammad Zubair Irshad</span>, Ashwin
+                                Balakrishna, Thomas Kollar, Ken Goldberg</p>
+                            <p class="venue">International Conference on Intelligent Robots and System, IROS 2024</p>
+                            <div class="publication-links">
+                                <a href="https://arxiv.org/pdf/2409.18108" class="btn">Paper</a>
+                                <a href="https://berkeleyautomation.github.io/LEGS/" class="btn">Project Page</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Open X-Embodiment - ICRA 2024 -->
+                    <div class="publication-card">
+                        <div class="publication-image">
+                            <video autoplay loop muted playsinline>
+                                <source src="videos/openx_embodiment_teaser.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="publication-content">
+                            <h3>Open X‑Embodiment: Robotic Learning Datasets and RT‑X Models</h3>
+                            <p class="authors">Open X-Embodiment Collaboration, Abby O'Neill, Abdul Rehman, Abhinav
+                                Gupta, …
+                                <span class="highlight">Muhammad Zubair Irshad</span> et al.
+                            </p>
+                            <p class="venue">IEEE International Conference on Robotics and Automation, ICRA 2024 (Best
+                                Paper Award)</p>
+                            <div class="publication-links">
+                                <a href="https://arxiv.org/pdf/2310.08864" class="btn">Paper</a>
+                                <a href="https://robotics-transformer-x.github.io/" class="btn">Project Page</a>
+                                <a href="https://github.com/google-deepmind/open_x_embodiment" class="btn">Code</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ICE-G - CVPR Workshop 2024 -->
+                    <div class="publication-card">
+                        <div class="publication-image">
+                            <video autoplay loop muted playsinline>
+                                <source src="videos/icegaussians.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="publication-content">
+                            <h3>ICE-G: Image Conditional Editing of 3D Gaussian Splats</h3>
+                            <p class="authors">Vishnu Jaganathan, Hannah Huang, <span class="highlight">Muhammad Zubair
+                                    Irshad</span>, Varun Jampani, Amit Raj, Zsolt Kira</p>
+                            <p class="venue">CVPR AI for Content Creation Workshop, 2024</p>
+                            <div class="publication-links">
+                                <a href="https://arxiv.org/pdf/2406.08488" class="btn">Paper</a>
+                                <a href="https://ice-gaussian.github.io/" class="btn">Project Page</a>
+                                <a href="https://youtu.be/dDsCwRXixp8" class="btn">Video</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FSD - ICRA 2024 -->
+                    <div class="publication-card">
+                        <div class="publication-image">
+                            <img src="images/publications/thesis_teaser-768x423.png" alt="FSD">
+                        </div>
+                        <div class="publication-content">
+                            <h3>FSD: Fast Self-Supervised Single RGB-D to Categorical 3D Objects</h3>
+                            <p class="authors">Mayank Lunayach, Sergey Zakharov, Dian Chen, Rares Ambrus, Zsolt Kira,
+                                <span class="highlight">Muhammad Zubair Irshad</span>
+                            </p>
+                            <p class="venue">IEEE International Conference on Robotics and Automation, ICRA 2024</p>
+                            <div class="publication-links">
+                                <a href="https://fsd6d.github.io/" class="btn">Project Page</a>
+                                <span class="btn btn-bibtex" onclick="toggleBibtex(this)">BibTeX</span>
+                            </div>
+                            <div class="bibtex-container">
+                                <div class="bibtex-box">
+                                    <button class="bibtex-copy-btn" onclick="copyBibtex(this)">Copy</button>
+                                    <pre>@inproceedings{lunayach2023fsd,
+  title={FSD: Fast Self-Supervised Single RGB-D to Categorical 3D Objects},
+  author={Mayank Lunayach and Sergey Zakharov and Dian Chen and Rares Ambrus and Zsolt Kira and Muhammad Zubair Irshad},
+  booktitle={International Conference on Robotics and Automation},
+  organization={IEEE},
+  year={2024}
+}</pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2023 -->
+                <div class="year-section">
+                    <div class="year-header">
+                        <div class="year-line"></div>
+                        <span class="year-number">2023</span>
+                    </div>
+
+                    <!-- PhD Thesis -->
+                    <div class="publication-card">
+                        <div class="publication-image">
+                            <img src="images/publications/thesis_teaser-768x423.png" alt="PhD Thesis">
+                        </div>
+                        <div class="publication-content">
+                            <h3>Learning 3D Robotics Perception using Inductive Priors</h3>
+                            <p class="authors"><span class="highlight">Muhammad Zubair Irshad</span></p>
+                            <p class="venue">PhD Thesis, Georgia Institute of Technology 2023</p>
+                            <div class="publication-links">
+                                <a href="https://arxiv.org/pdf/2405.20364" class="btn">Paper</a>
+                                <a href="https://youtu.be/3M2ze1gZjj8" class="btn">Video</a>
+                                <a href="https://repository.gatech.edu/entities/publication/01ef518d-5235-4131-990c-f552d3b309c6"
+                                    class="btn">Thesis Link</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- NeO 360 - ICCV 2023 -->
+                    <div class="publication-card">
+                        <div class="publication-image">
+                            <video autoplay loop muted playsinline>
+                                <source src="videos/neo_360_teaser.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="publication-content">
+                            <h3>NeO 360: Neural Fields for Sparse View Synthesis of Outdoor Scenes</h3>
+                            <p class="authors"><span class="highlight">Muhammad Zubair Irshad</span>, Sergey Zakharov,
+                                Katherine Liu, Vitor Guizilini, Thomas Kollar, Adrien Gaidon, Zsolt Kira, Rares Ambrus
+                            </p>
+                            <p class="venue">International Conference on Computer Vision, ICCV 2023</p>
+                            <div class="publication-links">
+                                <a href="https://arxiv.org/pdf/2308.12967.pdf" class="btn">Paper</a>
+                                <a href="https://zubair-irshad.github.io/projects/neo360.html" class="btn">Project
+                                    Page</a>
+                                <a href="https://github.com/zubair-irshad/NeO-360" class="btn">Code</a>
+                                <a href="https://youtu.be/avmylyL_V8c" class="btn">Video</a>
+                                <span class="btn btn-bibtex" onclick="toggleBibtex(this)">BibTeX</span>
+                            </div>
+                            <div class="bibtex-container">
+                                <div class="bibtex-box">
+                                    <button class="bibtex-copy-btn" onclick="copyBibtex(this)">Copy</button>
+                                    <pre>@inproceedings{irshad2023neo360,
+  title={NeO 360: Neural Fields for Sparse View Synthesis of Outdoor Scenes},
+  author={Muhammad Zubair Irshad and Sergey Zakharov and Katherine Liu and Vitor Guizilini and Thomas Kollar and Adrien Gaidon and Zsolt Kira and Rares Ambrus},
+  journal={International Conference on Computer Vision (ICCV)},
+  year={2023},
+}</pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CARTO - CVPR 2023 -->
+                    <div class="publication-card">
+                        <div class="publication-image">
+                            <img src="images/publications/carto_teaser.png" alt="CARTO">
+                        </div>
+                        <div class="publication-content">
+                            <h3>CARTO: Category and Join Agnostic Reconstruction of Articulated Objects</h3>
+                            <p class="authors">Nick Heppert, <span class="highlight">Muhammad Zubair Irshad</span>,
+                                Sergey
+                                Zakharov, Katherine Liu, Rares Ambrus, Jeannette Bohg, Abhinav Valada, Thomas Kollar</p>
+                            <p class="venue">Computer Vision and Pattern Recognition, CVPR 2023</p>
+                            <div class="publication-links">
+                                <a href="https://arxiv.org/pdf/2303.15782.pdf" class="btn">Paper</a>
+                                <a href="http://carto.cs.uni-freiburg.de/" class="btn">Project Page</a>
+                                <a href="https://github.com/robot-learning-freiburg/CARTO" class="btn">Code</a>
+                                <a href="https://youtu.be/nqImGPO5pn0" class="btn">Video</a>
+                                <span class="btn btn-bibtex" onclick="toggleBibtex(this)">BibTeX</span>
+                            </div>
+                            <div class="bibtex-container">
+                                <div class="bibtex-box">
+                                    <button class="bibtex-copy-btn" onclick="copyBibtex(this)">Copy</button>
+                                    <pre>@inproceedings{heppert2023carto,
+  title={Carto: Category and joint agnostic reconstruction of articulated objects},
+  author={Heppert, Nick and Irshad, Muhammad Zubair and Zakharov, Sergey and Liu, Katherine and Ambrus, Rares Andrei and Bohg, Jeannette and Valada, Abhinav and Kollar, Thomas},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={21201--21210},
+  year={2023}
+}</pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2022 -->
+                <div class="year-section">
+                    <div class="year-header">
+                        <div class="year-line"></div>
+                        <span class="year-number">2022</span>
+                    </div>
+
+                    <!-- ShAPO - ECCV 2022 -->
+                    <div class="publication-card">
+                        <div class="publication-image">
+                            <video autoplay loop muted playsinline>
+                                <source src="videos/shapo_teaser.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="publication-content">
+                            <h3>ShAPO: Implicit Representations for Multi-Object Shape, Appearance, and Pose
+                                Optimization</h3>
+                            <p class="authors"><span class="highlight">Muhammad Zubair Irshad</span>*, Sergey Zakharov*,
+                                Rares Ambrus, Thomas Kollar, Zsolt Kira, Adrien Gaidon</p>
+                            <p class="venue">European Conference on Computer Vision, ECCV 2022</p>
+                            <div class="publication-links">
+                                <a href="https://arxiv.org/pdf/2207.13691.pdf" class="btn">Paper</a>
+                                <a href="https://zubair-irshad.github.io/projects/ShAPO.html" class="btn">Project
+                                    Page</a>
+                                <a href="https://github.com/zubair-irshad/shapo" class="btn">Code</a>
+                                <a href="https://youtu.be/LMg7NDcLDcA" class="btn">Video</a>
+                                <span class="btn btn-bibtex" onclick="toggleBibtex(this)">BibTeX</span>
+                            </div>
+                            <div class="bibtex-container">
+                                <div class="bibtex-box">
+                                    <button class="bibtex-copy-btn" onclick="copyBibtex(this)">Copy</button>
+                                    <pre>@inproceedings{irshad2022shapo,
+  title = {ShAPO: Implicit Representations for Multi-Object Shape Appearance and Pose Optimization},
+  author = {Muhammad Zubair Irshad and Sergey Zakharov and Rares Ambrus and Thomas Kollar and Zsolt Kira and Adrien Gaidon},
+  journal = {European Conference on Computer Vision (ECCV)},
+  year = {2022}
+}</pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CenterSnap - ICRA 2022 -->
+                    <div class="publication-card">
+                        <div class="publication-image">
+                            <video autoplay loop muted playsinline>
+                                <source src="videos/centersnap_pose.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="publication-content">
+                            <h3>CenterSnap: Single-Shot Multi-Object 3D Shape Reconstruction and Categorical 6D Pose and
+                                Size Estimation</h3>
+                            <p class="authors"><span class="highlight">Muhammad Zubair Irshad</span>, Thomas Kollar,
+                                Michael
+                                Laskey, Kevin Stone, Zsolt Kira</p>
+                            <p class="venue">IEEE International Conference on Robotics and Automation, ICRA 2022</p>
+                            <div class="publication-links">
+                                <a href="https://arxiv.org/pdf/2203.01929.pdf" class="btn">Paper</a>
+                                <a href="https://zubair-irshad.github.io/projects/CenterSnap.html" class="btn">Project
+                                    Page</a>
+                                <a href="https://github.com/zubair-irshad/CenterSnap" class="btn">Code</a>
+                                <a href="https://www.youtube.com/watch?v=Bg5vi6DSMdM" class="btn">Video</a>
+                                <span class="btn btn-bibtex" onclick="toggleBibtex(this)">BibTeX</span>
+                            </div>
+                            <div class="bibtex-container">
+                                <div class="bibtex-box">
+                                    <button class="bibtex-copy-btn" onclick="copyBibtex(this)">Copy</button>
+                                    <pre>@inproceedings{irshad2022centersnap,
+	title = {CenterSnap: Single-Shot Multi-Object 3D Shape Reconstruction and Categorical 6D Pose and Size Estimation},
+	author = {Muhammad Zubair Irshad and Thomas Kollar and Michael Laskey and Kevin Stone and Zsolt Kira},
+	journal = {IEEE International Conference on Robotics and Automation (ICRA)},
+	year = {2022}
+}</pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SASRA - ICPR 2022 -->
+                    <div class="publication-card">
+                        <div class="publication-image">
+                            <img src="images/publications/sasra.png" alt="SASRA">
+                        </div>
+                        <div class="publication-content">
+                            <h3>SASRA: Semantically-aware Spatio-Temporal Reasoning Agent for Vision-and-Language
+                                Navigation</h3>
+                            <p class="authors"><span class="highlight">Muhammad Zubair Irshad</span>, Niluthpol Mithun,
+                                Zachary Seymour, Han-Pang Chiu, Supun Samarasekera, Rakesh Kumar</p>
+                            <p class="venue">International Conference on Pattern Recognition, ICPR 2022</p>
+                            <div class="publication-links">
+                                <a href="https://arxiv.org/pdf/2108.11945.pdf" class="btn">Paper</a>
+                                <a href="https://zubair-irshad.github.io/projects/SASRA.html" class="btn">Project
+                                    Page</a>
+                                <a href="https://youtu.be/DsziGtgaJC0" class="btn">Video</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2021 -->
+                <div class="year-section">
+                    <div class="year-header">
+                        <div class="year-line"></div>
+                        <span class="year-number">2021</span>
+                    </div>
+
+                    <!-- RoboVLN - ICRA 2021 -->
+                    <div class="publication-card">
+                        <div class="publication-image">
+                            <video autoplay loop muted playsinline>
+                                <source src="videos/robovln_teaser.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="publication-content">
+                            <h3>Hierarchical Cross-Modal Agent for Robotics Vision-and-Language Navigation</h3>
+                            <p class="authors"><span class="highlight">Muhammad Zubair Irshad</span>, Chih-Yao Ma, Zsolt
+                                Kira</p>
+                            <p class="venue">IEEE International Conference on Robotics and Automation, ICRA 2021</p>
+                            <div class="publication-links">
+                                <a href="https://arxiv.org/pdf/2104.10674.pdf" class="btn">Paper</a>
+                                <a href="https://zubair-irshad.github.io/projects/robo-vln.html" class="btn">Project
+                                    Page</a>
+                                <a href="https://github.com/GT-RIPL/robo-vln" class="btn">Code</a>
+                                <a href="https://youtu.be/y16x9n_zP_4" class="btn">Video</a>
+                                <span class="btn btn-bibtex" onclick="toggleBibtex(this)">BibTeX</span>
+                            </div>
+                            <div class="bibtex-container">
+                                <div class="bibtex-box">
+                                    <button class="bibtex-copy-btn" onclick="copyBibtex(this)">Copy</button>
+                                    <pre>@inproceedings{irshad2021hierarchical,
+  title={Hierarchical Cross-Modal Agent for Robotics Vision-and-Language Navigation},
+  author={Muhammad Zubair Irshad and Chih-Yao Ma and Zsolt Kira},
+  booktitle={Proceedings of the IEEE International Conference on Robotics and Automation (ICRA)},
+  year={2021}
+}</pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Zubair Irshad. Please feel free to copy with attribution.</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleBibtex(button) {
+            const container = button.closest('.publication-content').querySelector('.bibtex-container');
+            button.classList.toggle('active');
+            container.classList.toggle('open');
+        }
+
+        function copyBibtex(button) {
+            const pre = button.parentElement.querySelector('pre');
+            const text = pre.textContent;
+
+            navigator.clipboard.writeText(text).then(() => {
+                button.textContent = 'Copied!';
+                button.classList.add('copied');
+                setTimeout(() => {
+                    button.textContent = 'Copy';
+                    button.classList.remove('copied');
+                }, 2000);
+            }).catch(err => {
+                console.error('Failed to copy:', err);
+            });
+        }
+    </script>
+</body>
+
+</html>
