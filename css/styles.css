@@ -158,7 +158,7 @@ body::before {
     font-size: 1.5rem;
     font-weight: 400;
     color: var(--text-color);
-    margin-top: 10px;
+    margin-top: 0px;
 }
 
 .hero-name span {
@@ -170,6 +170,7 @@ body::before {
     font-size: 1.2rem;
     font-weight: 600;
     color: var(--text-color);
+    margin-top: -10px;
 }
 
 .social-icon-links {
@@ -200,8 +201,7 @@ body::before {
 }
 
 .social-icons a:hover {
-    transform: scale(0.9);
-    color: var(--accent-color);
+    transform: scale(1.1);
 }
 
 .social-labels {
@@ -267,7 +267,7 @@ h2::after {
 }
 
 .about-content p {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     text-align: justify;
     font-size: 16px;
     font-weight: 300;
@@ -543,8 +543,8 @@ h2::after {
     font-size: 13px;
     font-weight: 500;
     color: var(--text-color);
-    background: white;
-    border: 1px solid var(--border-color);
+    background: transparent;
+    border: 1px solid #999999;
     border-radius: 3px;
     text-decoration: none;
     transition: all 0.3s ease;
@@ -553,7 +553,7 @@ h2::after {
 .btn:hover {
     border-color: var(--accent-color);
     color: var(--accent-color);
-    background: rgba(158, 12, 169, 0.05);
+    background: transparent;
 }
 
 .btn-bibtex {
