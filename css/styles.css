@@ -353,8 +353,8 @@ h2::after {
 }
 
 .affiliation-name {
-    font-weight: 600;
-    font-size: 1rem;
+    font-weight: 500;
+    font-size: 0.9rem;
     color: var(--heading-color);
 }
 
@@ -369,6 +369,11 @@ h2::after {
     width: auto;
     height: auto;
     object-fit: contain;
+}
+
+.affiliation-logo.smaller-logo {
+    max-width: 67%;
+    max-height: 67%;
 }
 
 /* News Section */
