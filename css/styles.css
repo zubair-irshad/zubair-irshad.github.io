@@ -597,6 +597,11 @@ h2::after {
     font-size: 11px;
     font-weight: 500;
     color: #1e40af;
+    text-decoration: none;
+}
+
+a.highlight-badge:hover {
+    background: linear-gradient(to right, #bae6fd, #bfdbfe);
 }
 
 .publication-links {
@@ -759,6 +764,12 @@ h2::after {
     font-weight: 400;
 }
 
+.workshop-card .authors .highlight,
+.workshop-content .authors .highlight {
+    color: var(--text-color);
+    text-decoration: underline;
+}
+
 /* Teaching Section */
 .teaching-section {
     padding: 30px 0;
@@ -837,11 +848,11 @@ h2::after {
 
 .teaching-semester {
     font-family: var(--font-family-headings);
-    font-size: 13px;
-    color: #001f5c;
-    font-style: italic;
+    font-size: 14px;
+    color: #555;
+    font-style: normal;
     margin-bottom: 12px;
-    font-weight: 550;
+    font-weight: 400;
 }
 
 /* Software Section */
