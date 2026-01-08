@@ -1,18 +1,21 @@
 /* Zubair Irshad Portfolio - Styles */
 
+/* Import Professional Fonts - Inter for body, Poppins for headings */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+
 /* CSS Reset & Variables */
 :root {
-    --bg-color: #ffffff;
-    --text-color: #000000;
-    --heading-color: #222222;
-    --accent-color: rgb(180, 12, 172);
-    --accent-hover: rgb(150, 10, 142);
-    --light-gray: #f5f5f5;
-    --border-color: #e0e0e0;
-    --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    --bg-color: #FFFCF8;
+    --text-color: #3f3f46;
+    --heading-color: #18181b;
+    --accent-color: #18181b;
+    --accent-hover: #52525b;
+    --light-gray: #f4f4f5;
+    --border-color: #e4e4e7;
+    --shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
     --max-width: 1170px;
-    --font-family: 'Roboto', -apple-system, BlinkMacSystemFont, sans-serif;
-    --font-family-headings: 'Poppins', 'Roboto', sans-serif;
+    --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --font-family-headings: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 * {
@@ -115,6 +118,7 @@ body::before {
 .nav-links a:hover,
 .nav-links a.active {
     color: var(--accent-color);
+    text-decoration: underline;
 }
 
 /* Hero Section */
@@ -157,7 +161,7 @@ body::before {
     text-align: center;
     font-size: 1.5rem;
     font-weight: 400;
-    color: var(--text-color);
+    color: var(--heading-color);
     margin-top: 0px;
 }
 
@@ -167,59 +171,64 @@ body::before {
 
 .hero-title {
     text-align: center;
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: var(--text-color);
+    font-size: 1.0rem;
+    font-weight: 300;
+    color: var(--heading-color);
     margin-top: -10px;
 }
 
 .social-icon-links {
     display: flex;
     align-items: flex-start;
-    gap: 15px;
+    gap: 12px;
     margin-top: 5px;
 }
 
 .social-icons {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 6px;
 }
 
 .social-icons a {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
+    width: 14px;
+    height: 28px;
     background: transparent;
-    color: var(--text-color);
+    color: #52525b;
     text-decoration: none;
-    font-size: 1rem;
-    transition: all 0.3s ease;
+    transition: color 0.3s ease;
+}
+
+.social-icons a svg {
+    width: 14px;
+    height: 14px;
+    stroke: currentColor;
 }
 
 .social-icons a:hover {
-    transform: scale(1.1);
+    color: var(--heading-color);
 }
 
 .social-labels {
     display: flex;
     flex-direction: column;
-    gap: 8px;
-    font-size: 1rem;
+    gap: 6px;
+    font-size: 14px;
+    font-weight: 300;
 }
 
 .social-labels a {
-    color: var(--text-color);
+    color: #52525b;
     text-decoration: none;
-    line-height: 32px;
+    line-height: 28px;
+    transition: color 0.3s ease;
 }
 
 .social-labels a:hover {
-    text-decoration: underline;
-    color: var(--accent-color);
+    color: var(--heading-color);
 }
 
 .hero-right {
@@ -267,50 +276,56 @@ h2::after {
 }
 
 .about-content p {
-    margin-bottom: 10px;
-    text-align: justify;
-    font-size: 16px;
+    margin-bottom: 12px;
+    text-align: left;
+    font-size: 15px;
     font-weight: 300;
-    line-height: 1.8;
+    line-height: 1.75;
+    color: var(--text-color);
 }
 
 .about-content a {
-    color: var(--accent-color);
-    text-decoration: none;
+    color: var(--heading-color);
+    text-decoration: underline;
+    font-weight: 300;
     transition: color 0.3s ease;
 }
 
 .about-content a:hover {
     text-decoration: underline;
+    color: var(--accent-hover);
 }
 
 .research-topics {
     list-style: none;
     margin: 20px 0;
     padding-left: 20px;
-    font-size: 16px;
+    font-size: 15px;
+    color: var(--text-color);
 }
 
 .research-topics li {
     position: relative;
     padding-left: 20px;
     margin-bottom: 10px;
-    font-size: 16px;
+    font-size: 15px;
+    font-weight: 300;
+    color: var(--text-color);
+    line-height: 1.75;
 }
 
 .research-topics li::before {
     content: '•';
     position: absolute;
     left: 0;
-    color: #000000;
+    color: var(--text-color);
     font-weight: bold;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 /* Affiliations Section */
 .affiliations-section {
     padding: 10px 0;
-    background: white;
 }
 
 .affiliations-grid {
@@ -325,6 +340,16 @@ h2::after {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    width: 140px;
+}
+
+.affiliation-logo-container {
+    width: 120px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
 }
 
 .affiliation-name {
@@ -339,10 +364,11 @@ h2::after {
 }
 
 .affiliation-logo {
-    width: 120px;
-    height: 75px;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
     object-fit: contain;
-    margin-bottom: 10px;
 }
 
 /* News Section */
@@ -358,10 +384,11 @@ h2::after {
 .news-item {
     display: flex;
     align-items: flex-start;
-    padding: 2px 0;
+    padding: 3px 0;
     border-bottom: none;
-    font-size: 16px;
-    line-height: 1.6;
+    font-size: 14px;
+    line-height: 1.65;
+    color: var(--text-color);
 }
 
 .news-item.hidden {
@@ -373,11 +400,12 @@ h2::after {
 }
 
 .news-date {
-    font-weight: 600;
-    color: #000000;
+    font-weight: 500;
+    color: #71717a;
     min-width: 100px;
     flex-shrink: 0;
     margin-right: 20px;
+    font-size: 13px;
 }
 
 .news-text {
@@ -385,12 +413,14 @@ h2::after {
 }
 
 .news-item a {
-    color: var(--accent-color);
-    text-decoration: none;
+    color: var(--heading-color);
+    text-decoration: underline;
+    font-weight: 400;
 }
 
 .news-item a:hover {
     text-decoration: underline;
+    color: var(--accent-hover);
 }
 
 .show-more-btn {
@@ -409,9 +439,9 @@ h2::after {
 }
 
 .show-more-btn:hover {
-    border-color: var(--accent-color);
-    color: var(--accent-color);
-    background: rgba(158, 12, 169, 0.05);
+    border-color: var(--heading-color);
+    color: var(--heading-color);
+    background: rgba(0, 0, 0, 0.03);
 }
 
 /* Publications Section */
@@ -454,12 +484,14 @@ h2::after {
 }
 
 .publications-intro a {
-    color: var(--accent-color);
-    text-decoration: none;
+    color: var(--heading-color);
+    text-decoration: underline;
+    font-weight: 500;
 }
 
 .publications-intro a:hover {
     text-decoration: underline;
+    color: var(--accent-hover);
 }
 
 .publications-list {
@@ -497,6 +529,8 @@ h2::after {
 
 .publication-content {
     flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .publication-content h3 {
@@ -521,13 +555,43 @@ h2::after {
     text-decoration: underline;
 }
 
+.publication-content .venue-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+    order: -1;
+}
+
 .publication-content .venue {
-    font-family: var(--font-family-headings);
-    font-size: 13px;
-    color: #001f5c;
+    font-family: var(--font-family);
+    font-size: 12px;
+    color: #71717a;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.publication-content .venue-note {
+    font-family: var(--font-family);
+    font-size: 12px;
+    color: #71717a;
     font-style: italic;
-    margin-bottom: 12px;
-    font-weight: 550;
+    margin-bottom: 6px;
+    font-weight: 400;
+}
+
+.highlight-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 3px 10px;
+    background: linear-gradient(to right, #e0f2fe, #dbeafe);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    border-radius: 4px;
+    font-family: var(--font-family-headings);
+    font-size: 11px;
+    font-weight: 500;
+    color: #1e40af;
 }
 
 .publication-links {
@@ -551,9 +615,9 @@ h2::after {
 }
 
 .btn:hover {
-    border-color: var(--accent-color);
-    color: var(--accent-color);
-    background: transparent;
+    border-color: var(--heading-color);
+    color: var(--heading-color);
+    background: rgba(0, 0, 0, 0.03);
 }
 
 .btn-bibtex {
@@ -562,9 +626,9 @@ h2::after {
 }
 
 .btn-bibtex.active {
-    border-color: var(--accent-color);
-    color: var(--accent-color);
-    background: rgba(158, 12, 169, 0.1);
+    border-color: var(--heading-color);
+    color: var(--heading-color);
+    background: rgba(0, 0, 0, 0.05);
 }
 
 /* BibTeX Box Styles */
@@ -615,14 +679,14 @@ h2::after {
 }
 
 .bibtex-copy-btn:hover {
-    border-color: var(--accent-color);
-    color: var(--accent-color);
+    border-color: var(--heading-color);
+    color: var(--heading-color);
 }
 
 .bibtex-copy-btn.copied {
-    background: var(--accent-color);
+    background: var(--heading-color);
     color: white;
-    border-color: var(--accent-color);
+    border-color: var(--heading-color);
 }
 
 /* Workshops Section */
@@ -682,18 +746,17 @@ h2::after {
 
 .workshop-card .venue,
 .workshop-content .venue {
-    font-family: var(--font-family-headings);
-    font-size: 13px;
-    color: #001f5c;
-    font-style: italic;
-    margin-bottom: 12px;
-    font-weight: 550;
+    font-family: var(--font-family);
+    font-size: 12px;
+    color: #71717a;
+    font-style: normal;
+    margin-bottom: 8px;
+    font-weight: 400;
 }
 
 /* Teaching Section */
 .teaching-section {
     padding: 30px 0;
-    background: #f8f9fa;
 }
 
 .teaching-list {
@@ -752,34 +815,33 @@ h2::after {
 
 .teaching-content h3 {
     font-family: var(--font-family-headings);
-    font-size: 16px;
+    font-size: 17px;
     font-weight: 600;
-    color: #3b82f6;
-    margin-bottom: 6px;
-    line-height: 1.4;
+    color: var(--heading-color);
+    margin-bottom: 8px;
+    line-height: 1.5;
 }
 
 .teaching-role {
     font-family: var(--font-family-headings);
     font-size: 14px;
-    font-weight: 500;
-    color: var(--heading-color);
-    margin-bottom: 4px;
+    color: #555;
+    margin-bottom: 6px;
+    line-height: 1.6;
 }
 
 .teaching-semester {
     font-family: var(--font-family-headings);
-    font-size: 14px;
-    color: #666;
-    font-style: normal;
-    margin-bottom: 0;
-    font-weight: 400;
+    font-size: 13px;
+    color: #001f5c;
+    font-style: italic;
+    margin-bottom: 12px;
+    font-weight: 550;
 }
 
 /* Software Section */
 .software-section {
     padding: 20px 0;
-    background: white;
 }
 
 .software-list {
@@ -818,7 +880,7 @@ h2::after {
 
 .software-card .repo-name:hover {
     text-decoration: underline;
-    color: var(--accent-color);
+    color: var(--heading-color);
 }
 
 .software-card .stars {
