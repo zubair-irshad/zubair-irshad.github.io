@@ -982,6 +982,14 @@ footer p {
         font-size: 1.3rem;
         letter-spacing: 2px;
     }
+
+    .research-topics {
+        text-align: left;
+    }
+
+    .research-topics li {
+        text-align: left;
+    }
 }
 
 @media (max-width: 480px) {
