@@ -827,6 +827,8 @@ a.highlight-badge:hover {
 .teaching-content {
     flex: 1;
     padding-top: 4px;
+    display: flex;
+    flex-direction: column;
 }
 
 .teaching-content h3 {
@@ -840,11 +842,12 @@ a.highlight-badge:hover {
 
 .teaching-role {
     font-family: var(--font-family);
-    font-size: 14px;
+    font-size: 12px;
     color: #71717a;
-    margin-bottom: 2px;
+    margin-bottom: 6px;
     line-height: 1.5;
     font-weight: 400;
+    order: -1;
 }
 
 .teaching-semester {
