@@ -860,6 +860,28 @@ a.highlight-badge:hover {
     line-height: 1.5;
 }
 
+/* Course Link Style */
+.teaching-content h3 a.course-link {
+    color: var(--heading-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.teaching-content h3 a.course-link:hover {
+    color: #71717a;
+}
+
+.teaching-content h3 a.course-link .link-arrow {
+    display: inline-block;
+    font-size: 0.85em;
+    transition: transform 0.3s ease;
+}
+
+.teaching-content h3 a.course-link:hover .link-arrow {
+    transform: translate(2px, -2px);
+}
+
 /* Software Section */
 .software-section {
     padding: 20px 0;
@@ -886,6 +908,10 @@ a.highlight-badge:hover {
 .software-card:hover {
     transform: translateX(5px);
     background-color: rgba(0, 0, 0, 0.02);
+}
+
+.software-card:last-child {
+    border-bottom: none;
 }
 
 .software-card>i {
