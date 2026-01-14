@@ -958,6 +958,16 @@ footer p {
     font-size: 0.9rem;
 }
 
+footer a {
+    color: var(--heading-color);
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--accent-hover);
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .navbar {
