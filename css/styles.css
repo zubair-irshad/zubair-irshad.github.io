@@ -887,6 +887,177 @@ a.highlight-badge:hover {
     padding: 20px 0;
 }
 
+/* Talks Section */
+.talks-section {
+    padding: 20px 0;
+}
+
+.talks-list {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.talks-card {
+    display: flex;
+    gap: 25px;
+    align-items: flex-start;
+    background: var(--bg-color);
+    padding: 16px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.talks-card:last-child {
+    border-bottom: none;
+}
+
+.talks-left {
+    flex-shrink: 0;
+    width: 180px;
+    padding-top: 4px;
+}
+
+.talks-date {
+    font-family: var(--font-family);
+    font-size: 14px;
+    color: #71717a;
+    font-weight: 400;
+}
+
+.talks-content {
+    flex: 1;
+    padding-top: 4px;
+    display: flex;
+    flex-direction: column;
+}
+
+.talks-content h3 {
+    font-family: var(--font-family-headings);
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--heading-color);
+    margin-bottom: 6px;
+    line-height: 1.4;
+}
+
+.talks-venue {
+    font-family: var(--font-family);
+    font-size: 14px;
+    color: #71717a;
+    font-style: normal;
+    margin-bottom: 0;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+/* Talks Link Style with Animated Arrow */
+.talks-link {
+    color: var(--heading-color);
+    text-decoration: none;
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+.talks-link:hover {
+    color: #71717a;
+}
+
+.talks-link .link-arrow {
+    display: inline-block;
+    font-size: 0.85em;
+    transition: transform 0.3s ease;
+}
+
+.talks-link:hover .link-arrow {
+    transform: translate(2px, -2px);
+}
+
+/* Academic Service Section */
+.service-section {
+    padding: 20px 0;
+}
+
+.service-list {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.service-card {
+    display: flex;
+    gap: 25px;
+    align-items: flex-start;
+    background: var(--bg-color);
+    padding: 16px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.service-card:last-child {
+    border-bottom: none;
+}
+
+.service-left {
+    flex-shrink: 0;
+    width: 180px;
+    padding-top: 4px;
+}
+
+.service-role {
+    font-family: var(--font-family);
+    font-size: 14px;
+    color: #71717a;
+    font-weight: 400;
+}
+
+.service-content {
+    flex: 1;
+    padding-top: 4px;
+    display: flex;
+    flex-direction: column;
+}
+
+.service-content h3 {
+    font-family: var(--font-family-headings);
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--heading-color);
+    margin-bottom: 6px;
+    line-height: 1.4;
+}
+
+/* Service Link Style with Animated Arrow */
+.service-link {
+    color: var(--heading-color);
+    text-decoration: none;
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+.service-link:hover {
+    color: #71717a;
+}
+
+.service-link .link-arrow {
+    display: inline-block;
+    font-size: 0.85em;
+    transition: transform 0.3s ease;
+}
+
+.service-link:hover .link-arrow {
+    transform: translate(2px, -2px);
+}
+
+/* Service Venue Link Style - underline with subtle hover */
+.service-venue-link {
+    color: var(--heading-color);
+    text-decoration: underline;
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+.service-venue-link:hover {
+    color: #71717a;
+}
+
+
 .software-list {
     max-width: 1200px;
     margin: 0 auto;
@@ -923,7 +1094,7 @@ a.highlight-badge:hover {
     flex: 1;
     color: #000000;
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 0.95rem;
 }
 
@@ -1038,6 +1209,24 @@ footer a:hover {
 
     .research-topics li {
         text-align: left;
+    }
+
+    .talks-card {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .talks-left {
+        width: auto;
+    }
+
+    .service-card {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .service-left {
+        width: auto;
     }
 }
 
