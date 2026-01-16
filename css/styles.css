@@ -699,6 +699,12 @@ a.highlight-badge:hover {
     border-color: var(--heading-color);
 }
 
+/* Thesis Section */
+.thesis-section {
+    padding: 20px 0;
+    background: var(--bg-color);
+}
+
 /* Workshops Section */
 .workshops-section {
     padding: 30px 0;
