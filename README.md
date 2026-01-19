@@ -10,11 +10,11 @@ If you do so, please remember to update the Google Analytics configuration with 
 
 3. Push your changes to the `main` branch.
 
-4. Go to the GitHub page for your repository and navigate to **Settings** → **Pages**. If you set **Source** to **GitHub Actions**, it should suggest a build script for Next.js.
+4. Go to the GitHub page for your repository and navigate to **Settings** → **Pages**. Select **deploy from a branch** in Build and deployment section and choose the `main` branch.
 
-5. Commit the build script and watch it build.
+5. Your site should now be live at `https://[your-github-username].github.io/`.
 
-6. Your site should now be live at `https://[your-github-username].github.io/`.
+6. [Optional] If you want to use a custom domain, you can do so by adding a CNAME file to the root of your repository with the domain name in it.it.
 
 ## Contributing
 
