@@ -507,7 +507,7 @@ h2::after {
 .publication-card {
     display: flex;
     gap: 25px;
-    background: white;
+    background: var(--bg-color);
     padding: 22px 0;
     border-bottom: 1px solid var(--border-color);
 }
@@ -718,7 +718,7 @@ a.highlight-badge:hover {
 .workshop-card {
     display: flex;
     gap: 30px;
-    background: white;
+    background: var(--bg-color);
     padding: 25px 0;
     border-bottom: 1px solid var(--border-color);
 }
