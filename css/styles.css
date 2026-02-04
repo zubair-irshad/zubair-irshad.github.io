@@ -717,24 +717,25 @@ a.highlight-badge:hover {
 
 .workshop-card {
     display: flex;
-    gap: 30px;
+    gap: 25px;
     background: var(--bg-color);
-    padding: 25px 0;
+    padding: 22px 0;
     border-bottom: 1px solid var(--border-color);
 }
 
 .workshop-image {
     flex-shrink: 0;
-    width: 380px;
-    border-radius: 12px;
+    width: 340px;
+    border-radius: 10px;
     overflow: hidden;
+    background: transparent;
 }
 
 .workshop-image img {
     width: 100%;
     height: auto;
     display: block;
-    border-radius: 12px;
+    border-radius: 10px;
 }
 
 .workshop-content {
