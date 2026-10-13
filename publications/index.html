@@ -68,6 +68,64 @@
         .publications-page-content {
             padding: 20px 0 60px;
         }
+
+        /* Topic Filter Styles */
+        .topic-filters {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 30px;
+        }
+
+        .topic-filter {
+            font-family: var(--font-family-headings);
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 1.2;
+            padding: 8px 18px;
+            color: var(--text-color);
+            background: transparent;
+            border: 1px solid #d4d4d4;
+            border-radius: 999px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .topic-filter:hover {
+            border-color: var(--heading-color);
+            color: var(--heading-color);
+            background: rgba(0, 0, 0, 0.03);
+        }
+
+        /* Active state reuses the blue highlight-badge accent */
+        .topic-filter.active {
+            font-weight: 500;
+            color: #1e40af;
+            background: linear-gradient(to right, #e0f2fe, #dbeafe);
+            border-color: rgba(59, 130, 246, 0.35);
+        }
+
+        .topic-filter:focus-visible {
+            outline: 2px solid var(--heading-color);
+            outline-offset: 2px;
+        }
+
+        .year-section.is-empty,
+        .publication-card.is-hidden {
+            display: none;
+        }
+
+        .year-section .publication-card.is-last-visible {
+            border-bottom: none;
+        }
+
+        @media (max-width: 480px) {
+            .topic-filter {
+                font-size: 13px;
+                padding: 7px 14px;
+            }
+        }
     </style>
 </head>
 
@@ -94,6 +152,14 @@
             <p>For a complete list, please see my <a href="https://scholar.google.com/citations?user=K2XA5XEAAAAJ&hl=en"
                     style="color: var(--heading-color); text-decoration: underline; font-weight: 500;">Google Scholar
                     Profile</a></p>
+            <div class="topic-filters" role="group" aria-label="Filter publications by topic">
+                <button class="topic-filter active" data-topic="all" aria-pressed="true">All</button>
+                <button class="topic-filter" data-topic="robot-learning" aria-pressed="false">Robot Learning</button>
+                <button class="topic-filter" data-topic="world-models" aria-pressed="false">World Models</button>
+                <button class="topic-filter" data-topic="vision-language" aria-pressed="false">Vision-and-Language</button>
+                <button class="topic-filter" data-topic="digital-twins" aria-pressed="false">Digital Twins</button>
+                <button class="topic-filter" data-topic="3d-perception" aria-pressed="false">3D Perception</button>
+            </div>
         </div>
     </section>
 
@@ -110,7 +176,7 @@
                     </div>
 
                     <!-- LBM - Science Robotics 2026 -->
-                    <div class="publication-card">
+                    <div class="publication-card" data-topics="robot-learning">
                         <div class="publication-image">
                             <video data-lazy loop muted playsinline preload="none"
                                 poster="/videos/posters/lbm_teaser_poster.jpg">
@@ -160,7 +226,7 @@ eprint = {https://www.science.org/doi/pdf/10.1126/scirobotics.aea6201},
                     </div>
 
                     <!-- PolaRiS -->
-                    <div class="publication-card">
+                    <div class="publication-card" data-topics="robot-learning world-models digital-twins">
                         <div class="publication-image">
                             <video data-lazy loop muted playsinline preload="none"
                                 poster="/videos/posters/polaris_teaser_poster.jpg">
@@ -197,7 +263,7 @@ eprint = {https://www.science.org/doi/pdf/10.1126/scirobotics.aea6201},
                     </div>
 
                     <!-- AnchorDream -->
-                    <div class="publication-card">
+                    <div class="publication-card" data-topics="world-models robot-learning">
                         <div class="publication-image">
                             <video data-lazy loop muted playsinline preload="none"
                                 poster="/videos/posters/anchor_dream_poster.jpg">
@@ -231,7 +297,7 @@ eprint = {https://www.science.org/doi/pdf/10.1126/scirobotics.aea6201},
                     </div>
 
                     <!-- RoboDream -->
-                    <div class="publication-card">
+                    <div class="publication-card" data-topics="world-models robot-learning">
                         <div class="publication-image">
                             <video data-lazy loop muted playsinline preload="none"
                                 poster="/images/publications/robo_dream_teaser.png">
@@ -266,7 +332,7 @@ eprint = {https://www.science.org/doi/pdf/10.1126/scirobotics.aea6201},
                     </div>
 
                     <!-- FastMap - 3DV 2026 -->
-                    <div class="publication-card">
+                    <div class="publication-card" data-topics="3d-perception">
                         <div class="publication-image">
                             <video data-lazy loop muted playsinline preload="none"
                                 poster="/videos/posters/fastmap_teaser_poster.jpg">
@@ -303,7 +369,7 @@ eprint = {https://www.science.org/doi/pdf/10.1126/scirobotics.aea6201},
                     </div>
 
                     <!-- RecGen - ECCV 2026 -->
-                    <div class="publication-card">
+                    <div class="publication-card" data-topics="3d-perception digital-twins">
                         <div class="publication-image">
                             <video data-lazy loop muted playsinline preload="none"
                                 poster="/images/publications/recgen.png">
@@ -337,7 +403,7 @@ eprint = {https://www.science.org/doi/pdf/10.1126/scirobotics.aea6201},
                     </div>
 
                     <!-- Anyview - ECCV 2026 -->
-                    <div class="publication-card">
+                    <div class="publication-card" data-topics="world-models 3d-perception">
                         <div class="publication-image">
                             <video data-lazy loop muted playsinline preload="none"
                                 poster="/videos/posters/anyview_poster.png">
@@ -377,7 +443,7 @@ eprint = {https://www.science.org/doi/pdf/10.1126/scirobotics.aea6201},
                     </div>
 
                     <!-- H2RBench - CoRL 2026 -->
-                    <div class="publication-card">
+                    <div class="publication-card" data-topics="robot-learning world-models digital-twins">
                         <div class="publication-image">
                             <img src="/images/publications/h2rbench_teaser.jpg" alt="H2RBench">
                         </div>
@@ -409,7 +475,7 @@ eprint = {https://www.science.org/doi/pdf/10.1126/scirobotics.aea6201},
                     </div>
 
                     <!-- EscherNet++ - CVPR Findings 2026 -->
-                    <div class="publication-card">
+                    <div class="publication-card" data-topics="3d-perception">
                         <div class="publication-image">
                             <img src="/images/publications/eschernet++_teaser.png" alt="EscherNet++">
                         </div>
@@ -441,7 +507,7 @@ eprint = {https://www.science.org/doi/pdf/10.1126/scirobotics.aea6201},
                     </div>
 
                     <!-- Neural Fields Survey - T-RO 2026 -->
-                    <div class="publication-card">
+                    <div class="publication-card" data-topics="3d-perception">
                         <div class="publication-image">
                             <img src="/images/publications/robonerf_timeline_v2-768x246.png" alt="Neural Fields Survey">
                         </div>
@@ -475,7 +541,7 @@ eprint = {https://www.science.org/doi/pdf/10.1126/scirobotics.aea6201},
                     </div>
 
                     <!-- BIND - arXiv 2026 -->
-                    <div class="publication-card">
+                    <div class="publication-card" data-topics="robot-learning">
                         <div class="publication-image">
                             <video data-lazy loop muted playsinline preload="none"
                                 poster="/videos/posters/bind_teaser_poster.jpg">
@@ -513,7 +579,7 @@ eprint = {https://www.science.org/doi/pdf/10.1126/scirobotics.aea6201},
                     </div>
 
                     <!-- Splat2Act - arXiv 2026 -->
-                    <div class="publication-card">
+                    <div class="publication-card" data-topics="robot-learning vision-language digital-twins">
                         <div class="publication-image">
                             <img src="/images/publications/splat2act_teaser.jpg" alt="Splat2Act">
                         </div>
@@ -550,7 +616,7 @@ eprint = {https://www.science.org/doi/pdf/10.1126/scirobotics.aea6201},
                     </div>
 
                     <!-- What 30,000 Hours of Ego-centric Video Does Not Teach - arXiv 2026 -->
-                    <div class="publication-card">
+                    <div class="publication-card" data-topics="world-models">
                         <div class="publication-image">
                             <video data-lazy loop muted playsinline preload="none"
                                 poster="/videos/posters/egocentric_world_model_teaser_poster.jpg">
@@ -590,7 +656,7 @@ eprint = {https://www.science.org/doi/pdf/10.1126/scirobotics.aea6201},
                     </div>
 
                     <!-- Video2Sim2Real -->
-                    <div class="publication-card">
+                    <div class="publication-card" data-topics="robot-learning world-models digital-twins">
                         <div class="publication-image">
                             <video data-lazy loop muted playsinline preload="none"
                                 poster="/images/publications/video2sim2real_teaser.png">
@@ -634,7 +700,7 @@ eprint = {https://www.science.org/doi/pdf/10.1126/scirobotics.aea6201},
                     </div>
 
                     <!-- Real2Render2Real - CoRL 2025 -->
-                    <div class="publication-card">
+                    <div class="publication-card" data-topics="robot-learning world-models digital-twins">
                         <div class="publication-image">
                             <video data-lazy loop muted playsinline preload="none"
                                 poster="/videos/posters/real2render2real_teaser_poster.jpg">
@@ -677,7 +743,7 @@ eprint = {https://www.science.org/doi/pdf/10.1126/scirobotics.aea6201},
                     </div>
 
                     <!-- MVGD - CVPR 2025 -->
-                    <div class="publication-card">
+                    <div class="publication-card" data-topics="3d-perception">
                         <div class="publication-image">
                             <video data-lazy loop muted playsinline preload="none"
                                 poster="/videos/posters/mvgd_teaser_web_poster.jpg">
@@ -714,7 +780,7 @@ eprint = {https://www.science.org/doi/pdf/10.1126/scirobotics.aea6201},
                     </div>
 
                     <!-- ZeroGrasp - CVPR 2025 -->
-                    <div class="publication-card">
+                    <div class="publication-card" data-topics="3d-perception robot-learning">
                         <div class="publication-image">
                             <video data-lazy loop muted playsinline preload="none"
                                 poster="/videos/posters/zero_grasp_teaser_final_poster.jpg">
@@ -752,7 +818,7 @@ eprint = {https://www.science.org/doi/pdf/10.1126/scirobotics.aea6201},
                     </div>
 
                     <!-- EmbodiedSplat - ICCV 2025 -->
-                    <div class="publication-card">
+                    <div class="publication-card" data-topics="robot-learning digital-twins">
                         <div class="publication-image">
                             <img src="/images/publications/EmbodiedSplat_Architecture.png" alt="Embodied Splat">
                         </div>
@@ -789,7 +855,7 @@ eprint = {https://www.science.org/doi/pdf/10.1126/scirobotics.aea6201},
                     </div>
 
                     <!-- DROID/Posed-DROID - RSS 2024 -->
-                    <div class="publication-card">
+                    <div class="publication-card" data-topics="3d-perception robot-learning">
                         <div class="publication-image">
                             <video data-lazy loop muted playsinline preload="none"
                                 poster="/videos/posters/posed_droid_teaser_poster.jpg">
@@ -825,7 +891,7 @@ note={Medium blog post}
                     </div>
 
                     <!-- SplArt - ICCV 2025 -->
-                    <div class="publication-card">
+                    <div class="publication-card" data-topics="3d-perception digital-twins">
                         <div class="publication-image">
                             <video data-lazy loop muted playsinline preload="none"
                                 poster="/videos/posters/splart_teaser_final_poster.jpg">
@@ -863,7 +929,7 @@ note={Medium blog post}
                     </div>
 
                     <!-- POGS - ICRA 2025 -->
-                    <div class="publication-card">
+                    <div class="publication-card" data-topics="3d-perception robot-learning">
                         <div class="publication-image">
                             <video data-lazy loop muted playsinline preload="none"
                                 poster="/videos/posters/pogs_teaser_final_poster.jpg">
@@ -900,7 +966,7 @@ note={Medium blog post}
                     </div>
 
                     <!-- GTR -->
-                    <div class="publication-card">
+                    <div class="publication-card" data-topics="3d-perception">
                         <div class="publication-image">
                             <img src="/images/publications/gtr_teaser-1536x381.png" alt="GTR">
                         </div>
@@ -943,7 +1009,7 @@ note={Medium blog post}
                     </div>
 
                     <!-- NeRF-MAE - ECCV 2024 -->
-                    <div class="publication-card">
+                    <div class="publication-card" data-topics="3d-perception">
                         <div class="publication-image">
                             <img src="/videos/animation_nerf_mae_white-ezgif.com-resize.gif" alt="NeRF-MAE">
                         </div>
@@ -979,7 +1045,7 @@ note={Medium blog post}
                     </div>
 
                     <!-- DROID - RSS 2024 -->
-                    <div class="publication-card">
+                    <div class="publication-card" data-topics="robot-learning">
                         <div class="publication-image">
                             <video data-lazy loop muted playsinline preload="none"
                                 poster="/videos/posters/droid_teaser_final_poster.jpg">
@@ -1014,7 +1080,7 @@ note={Medium blog post}
                     </div>
 
                     <!-- RoVi-Aug - CoRL 2024 -->
-                    <div class="publication-card">
+                    <div class="publication-card" data-topics="robot-learning">
                         <div class="publication-image">
                             <video data-lazy loop muted playsinline preload="none"
                                 poster="/videos/posters/rovi_aug_teaser_final_poster.jpg">
@@ -1055,7 +1121,7 @@ note={Medium blog post}
                     </div>
 
                     <!-- Open X-Embodiment - ICRA 2024 -->
-                    <div class="publication-card">
+                    <div class="publication-card" data-topics="robot-learning">
                         <div class="publication-image">
                             <video data-lazy loop muted playsinline preload="none"
                                 poster="/videos/posters/openx_embodiment_teaser_poster.jpg">
@@ -1093,7 +1159,7 @@ note={Medium blog post}
                     </div>
 
                     <!-- LEGS - IROS 2024 -->
-                    <div class="publication-card">
+                    <div class="publication-card" data-topics="vision-language 3d-perception">
                         <div class="publication-image">
                             <video data-lazy loop muted playsinline preload="none"
                                 poster="/videos/posters/LEGS_demo_poster.jpg">
@@ -1132,7 +1198,7 @@ note={Medium blog post}
                     </div>
 
                     <!-- DiffusionNOCS - IROS 2024 -->
-                    <div class="publication-card">
+                    <div class="publication-card" data-topics="3d-perception">
                         <div class="publication-image">
                             <img src="/images/publications/diffusionnocs_teaser.png" alt="DiffusionNOCS">
                         </div>
@@ -1167,7 +1233,7 @@ note={Medium blog post}
                     </div>
 
                     <!-- MANIP - IROS 2024 -->
-                    <div class="publication-card">
+                    <div class="publication-card" data-topics="robot-learning">
                         <div class="publication-image">
                             <img src="/images/publications/manip_teaser.png" alt="MANIP">
                         </div>
@@ -1202,7 +1268,7 @@ note={Medium blog post}
                     </div>
 
                     <!-- ICE-G - CVPR Workshop 2024 -->
-                    <div class="publication-card">
+                    <div class="publication-card" data-topics="3d-perception">
                         <div class="publication-image">
                             <video data-lazy loop muted playsinline preload="none"
                                 poster="/videos/posters/icegaussians_poster.jpg">
@@ -1239,7 +1305,7 @@ note={Medium blog post}
                     </div>
 
                     <!-- FSD - ICRA 2024 -->
-                    <div class="publication-card">
+                    <div class="publication-card" data-topics="3d-perception">
                         <div class="publication-image">
                             <img src="/images/publications/fsd_teaser.jpg" alt="FSD">
                         </div>
@@ -1280,7 +1346,7 @@ note={Medium blog post}
                     </div>
 
                     <!-- PhD Thesis -->
-                    <div class="publication-card">
+                    <div class="publication-card" data-topics="3d-perception">
                         <div class="publication-image">
                             <img src="/images/publications/thesis_teaser-768x423.png" alt="PhD Thesis">
                         </div>
@@ -1316,7 +1382,7 @@ note={Medium blog post}
                     </div>
 
                     <!-- NeO 360 - ICCV 2023 -->
-                    <div class="publication-card">
+                    <div class="publication-card" data-topics="3d-perception">
                         <div class="publication-image">
                             <video data-lazy loop muted playsinline preload="none"
                                 poster="/videos/posters/neo_360_teaser_poster.jpg">
@@ -1354,7 +1420,7 @@ note={Medium blog post}
                     </div>
 
                     <!-- CARTO - CVPR 2023 -->
-                    <div class="publication-card">
+                    <div class="publication-card" data-topics="3d-perception">
                         <div class="publication-image">
                             <img src="/images/publications/carto_teaser.png" alt="CARTO">
                         </div>
@@ -1397,7 +1463,7 @@ note={Medium blog post}
                     </div>
 
                     <!-- ShAPO - ECCV 2022 -->
-                    <div class="publication-card">
+                    <div class="publication-card" data-topics="3d-perception digital-twins">
                         <div class="publication-image">
                             <video data-lazy loop muted playsinline preload="none"
                                 poster="/videos/posters/shapo_teaser_poster.jpg">
@@ -1435,7 +1501,7 @@ note={Medium blog post}
                     </div>
 
                     <!-- CenterSnap - ICRA 2022 -->
-                    <div class="publication-card">
+                    <div class="publication-card" data-topics="3d-perception digital-twins">
                         <div class="publication-image">
                             <video data-lazy loop muted playsinline preload="none"
                                 poster="/videos/posters/centersnap_pose_poster.jpg">
@@ -1474,7 +1540,7 @@ note={Medium blog post}
                     </div>
 
                     <!-- SASRA - ICPR 2022 -->
-                    <div class="publication-card">
+                    <div class="publication-card" data-topics="vision-language">
                         <div class="publication-image">
                             <img src="/images/publications/sasra.png" alt="SASRA">
                         </div>
@@ -1518,7 +1584,7 @@ note={Medium blog post}
                     </div>
 
                     <!-- RoboVLN - ICRA 2021 -->
-                    <div class="publication-card">
+                    <div class="publication-card" data-topics="vision-language">
                         <div class="publication-image">
                             <video data-lazy loop muted playsinline preload="none"
                                 poster="/videos/posters/robovln_teaser_poster.jpg">
@@ -1589,6 +1655,50 @@ note={Medium blog post}
                 console.error('Failed to copy:', err);
             });
         }
+
+        // Topic filtering
+        function filterPublications(topic) {
+            document.querySelectorAll('.topic-filter').forEach(button => {
+                const isActive = button.dataset.topic === topic;
+                button.classList.toggle('active', isActive);
+                button.setAttribute('aria-pressed', isActive);
+            });
+
+            document.querySelectorAll('.year-section').forEach(section => {
+                let lastVisible = null;
+                section.querySelectorAll('.publication-card').forEach(card => {
+                    const topics = (card.dataset.topics || '').split(' ');
+                    const visible = topic === 'all' || topics.includes(topic);
+                    card.classList.toggle('is-hidden', !visible);
+                    card.classList.remove('is-last-visible');
+                    if (visible) lastVisible = card;
+                });
+                if (lastVisible) lastVisible.classList.add('is-last-visible');
+                section.classList.toggle('is-empty', !lastVisible);
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const buttons = document.querySelectorAll('.topic-filter');
+            const topics = Array.from(buttons, button => button.dataset.topic);
+
+            buttons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const topic = button.dataset.topic;
+                    filterPublications(topic);
+                    const url = topic === 'all' ? location.pathname + location.search : '#' + topic;
+                    history.replaceState(null, '', url);
+                });
+            });
+
+            // Support links like /publications#world-models
+            function applyHash() {
+                const hashTopic = location.hash.slice(1);
+                filterPublications(topics.includes(hashTopic) ? hashTopic : 'all');
+            }
+            window.addEventListener('hashchange', applyHash);
+            applyHash();
+        });
 
         // Lazy loading for videos using Intersection Observer
         document.addEventListener('DOMContentLoaded', function () {
